@@ -1,0 +1,3558 @@
+/* =========================================================================
+   DIGITALHAUSA PAGE-SPECIFIC STYLES
+   Consolidated from: style.css, dashboard.css, learn.css, lesson.css, dictionary.css
+   ========================================================================= */
+
+/* =========================================================================
+   SECTION 1: LANDING PAGE (from style.css)
+   ========================================================================= */
+
+/* Custom Typography & Design Variables */
+/* Header Styling */
+.main-header {
+    position: sticky; /* Keep context for absolute child positioning */
+  top: 0;
+    z-index: 100;
+    background-color: rgba(250, 249, 246, 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-light);
+    padding: 14px 20px;
+}
+
+.header-container {
+    max-w: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.logo-icon { font-size: 24px; }
+.logo-text {
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: -0.5px;
+    color: var(--primary-green);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-lang, .btn-menu {
+    background: var(--surface-white);
+    border: 1px solid rgba(0,0,0,0.12);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-menu {
+    padding: 6px 10px;
+    font-size: 1.2rem;
+}
+
+.btn-lang:hover, .btn-menu:hover {
+    background: #f0f0f0;
+}
+
+/* Main Grid Layout */
+.main-content {
+    max-w: 1200px;
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 20px 0 40px 0;
+    align-items: center;
+}
+
+.hero-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+}
+
+.hero-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 32px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-primary, .btn-secondary {
+    width: 100%;
+    padding: 14px;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    color: var(--surface-white);
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+}
+
+.btn-primary:hover { background-color: var(--primary-green-hover); }
+
+.btn-secondary {
+    background-color: var(--surface-white);
+    color: var(--text-dark);
+    border: 1px solid rgba(0,0,0,0.15);
+}
+
+/* Glowing Lantern Component Card */
+.visual-card {
+    background: var(--surface-white);
+    border-radius: var(--radius-xl);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 280px;
+}
+
+.ambient-glow {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(46, 125, 50, 0.08), rgba(201, 151, 0, 0.04));
+}
+
+.visual-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.lantern-icon {
+    font-size: 4.5rem;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 20px rgba(46, 125, 50, 0.4));
+}
+
+.floating-icons {
+    font-size: 2rem;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.tag-row {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.tech-tag {
+    background: var(--bg-warm);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid var(--border-light);
+}
+
+/* Search Bar styling */
+.search-section {
+    max-w: 600px;
+    margin: 20px auto 60px auto;
+}
+
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    font-size: 1.2rem;
+}
+
+#universal-search {
+    width: 100%;
+    padding: 16px 16px 16px 48px;
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.12);
+    font-size: 1rem;
+    color: var(--text-dark);
+    outline: none;
+    box-shadow: var(--shadow-soft);
+    transition: border 0.2s;
+}
+
+#universal-search:focus {
+    border-color: var(--primary-green);
+}
+
+/* Desktop Responsive Layout Enhancements */
+@media (min-width: 768px) {
+    .hero-section {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 60px;
+        padding: 60px 0;
+    }
+    
+    .hero-title { font-size: 3.2rem; }
+    .hero-actions { flex-direction: row; }
+    .btn-primary, .btn-secondary { width: auto; padding: 14px 32px; }
+    .visual-card { min-height: 380px; }
+    .lantern-icon { font-size: 5.5rem; }
+}
+/* Featured Learning Tracks Styling */
+/* Updated Category & Sub-Grid Layouts */
+.category-block {
+    background: var(--surface-white);
+    border-radius: 24px;
+    padding: 24px;
+    border: 1px solid rgba(0,0,0,0.04);
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 32px;
+}
+
+.category-block:hover {
+    border-color: rgba(46, 125, 50, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.active-track:hover {
+    transform: translateY(-2px);
+    bgox-shadow: 0 12px 35px rgba(46, 125, 50, 0.06);
+}
+
+.category-info {
+    margin-bottom: 20px;
+}
+
+.category-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.category-tagline {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-top: 2px;
+}
+
+/* 2x2 Layout Default for Mobile Screen Sizes */
+.sub-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.sub-card {
+    background: var(--bg-warm);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.highlight-card {
+    border-color: rgba(46, 125, 50, 0.3);
+    background: rgba(46, 125, 50, 0.02);
+}
+
+.sub-card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.sub-card-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.sub-card-meta {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+/* Explore Link Styling */
+.explore-link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    transition: color 0.2s;
+}
+
+.explore-link.link-green {
+    color: var(--primary-green);
+}
+.section-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--primary-green);
+    background: rgba(46, 125, 50, 0.06);
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  text-align: right;
+}
+
+/* How Learning Works Styles */
+.journey-section, .why-section {
+    padding: 40px 0;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.journey-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.journey-step {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--surface-white);
+    padding: 12px 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+    width: 100%;
+    max-w: 320px;
+    box-shadow: var(--shadow-soft);
+}
+
+.step-number {
+    background: var(--primary-green);
+    color: white;
+    font-weight: 700;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.step-details h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.flow-line {
+    width: 2px;
+    height: 24px;
+    background-color: var(--primary-green);
+    opacity: 0.3;
+}
+
+/* Why DigitalHausa Grid CSS */
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.why-card {
+    background: var(--surface-white);
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    padding: 24px;
+    text-align: left;
+    box-shadow: var(--shadow-soft);
+}
+
+.why-icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.why-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.why-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Call to Action Block Banner */
+.cta-banner {
+    background: linear-gradient(135deg, #2E7D32, #225C25);
+    border-radius: 24px;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    margin: 60px 0 20px 0;
+}
+
+.cta-banner h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+/* Footer Styles */
+/* Premium Footer System styling */
+.main-footer {
+    background-color: #FAF9F6;
+    border-top: 1px solid var(--border-light);
+    padding: 0 0 40px 0;
+    margin-top: 60px;
+}
+
+/* Green CTA Accent Banner Block */
+.footer-cta-banner {
+    background-color: #1E5235; /* Darker rich forest green variant from screenshots */
+    color: var(--surface-white);
+    text-align: center;
+    padding: 48px 20px;
+    margin-bottom: 48px;
+}
+
+.footer-cta-banner h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.footer-cta-banner p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 24px;
+}
+
+.btn-cta-footer {
+    background-color: #FAF9F6;
+    color: #1E5235;
+    border: none;
+    padding: 12px 36px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.2s;
+}
+
+.btn-cta-footer:hover {
+    transform: scale(1.02);
+}
+
+/* Grid Framework Columns */
+.footer-container {
+    max-w: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid layout framework on mobile screens */
+    gap: 32px 16px;
+    margin-bottom: 48px;
+}
+
+.footer-column h4 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.15s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--primary-green);
+}
+
+/* Bottom Identity Section Alignment */
+.footer-bottom {
+    border-top: 1px solid var(--border-light);
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-logo .logo-text {
+    font-weight: 800;
+    color: #1E5235;
+    letter-spacing: 0.5px;
+}
+
+.copyright-text {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+/* High-Resolution Landscape Scaling Upgrade rules */
+@media (min-width: 768px) {
+    .footer-links-grid {
+        grid-template-columns: repeat(4, 1fr); /* Smooth clean single row inline on desktop sizes */
+    }
+    .footer-cta-banner {
+        padding: 64px 20px;
+    }
+    .footer-cta-banner h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Desktop Multi-column Layout Expansion */
+@media (min-width: 768px) {
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+    .cta-banner {
+        padding: 60px;
+    }
+    .cta-banner h2 {
+        font-size: 2.4rem;
+    }
+}
+
+/* Scale gracefully up to responsive 4-column line layout on desktops */
+@media (min-width: 768px) {
+    .category-block { padding: 32px; }
+    .sub-cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+}
+
+/* =========================================================================
+   SECTION 2: DASHBOARD (from dashboard.css)
+   ========================================================================= */
+
+/* --- Strict Design System Palette Enforcement --- */
+/* --- Branding Header Navbar --- */
+.dash-app-bar {
+    background-color: var(--surface-white);
+    border-bottom: 1px solid var(--border-light);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+}
+
+.brand-identity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-logo {
+    font-size: 1.4rem;
+}
+
+.brand-name {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    letter-spacing: -0.4px;
+}
+
+/* --- Container Frame Setup --- */
+.dash-workspace {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 20px 16px 100px 16px; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- Welcome Surface Card Panel --- */
+.welcome-surface-card {
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    box-shadow: var(--shadow-soft);
+}
+
+.user-greeting {
+    margin: 0 0 8px 0;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    letter-spacing: -0.4px;
+}
+
+.welcome-caption {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* --- Learning Streak & Points Stats Box Layout --- */
+.stats-overview-grid {
+    display: flex;
+    gap: 12px;
+}
+
+.stat-card {
+    flex: 1;
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--shadow-soft);
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.1;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+/* --- Resume Section Container --- */
+.resume-learning-panel {
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 20px;
+    box-shadow: var(--shadow-soft);
+}
+
+.panel-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+}
+
+.resume-hierarchy-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 20px;
+    padding-left: 4px;
+}
+
+.node-track {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.sub-track::before {
+    content: "› ";
+    color: var(--text-secondary);
+    padding-right: 2px;
+}
+
+.node-leaf {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-top: 2px;
+}
+
+.resume-action-row {
+    display: flex;
+}
+
+.resume-btn {
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-green);
+    color: var(--surface-white);
+    text-decoration: none;
+    padding: 14px;
+    border-radius: var(--radius-xl);
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+}
+
+.resume-btn:hover {
+    background-color: var(--primary-green-hover);
+}
+
+/* --- Current Goal Metrics Box --- */
+.metric-card {
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 20px;
+    box-shadow: var(--shadow-soft);
+}
+
+.metric-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.metric-icon {
+    font-size: 1.6rem;
+}
+
+.metric-title-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-label {
+    margin: 0;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+.metric-value {
+    margin: 2px 0 0 0;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.goal-progress-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.goal-progress-bar {
+    flex: 1;
+    height: 10px;
+    background-color: var(--bg-warm);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.goal-progress-fill {
+    height: 100%;
+    background-color: var(--primary-green);
+    border-radius: var(--radius-full);
+}
+
+.goal-percent-text {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    min-width: 32px;
+    text-align: right;
+}
+
+.goal-stats-footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-light);
+    padding-top: 12px;
+}
+
+.stat-sub-node {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-count {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.stat-sub-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.align-right {
+    text-align: right;
+}
+
+/* --- Section Headings Structural Rules --- */
+.content-block-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--text-secondary);
+    letter-spacing: 0.6px;
+    padding-left: 4px;
+}
+
+/* --- Paths Matrix Element Rows --- */
+.paths-list-wrapper {
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 8px 16px;
+    box-shadow: var(--shadow-soft);
+}
+
+.path-row-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.path-row-item:last-child {
+    border-bottom: none;
+}
+
+.path-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.path-progress-metric {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mini-bar {
+    width: 60px;
+    height: 6px;
+    background-color: var(--bg-warm);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.mini-fill {
+    height: 100%;
+    background-color: var(--text-secondary);
+    border-radius: var(--radius-full);
+}
+
+.complete-bg {
+    background-color: var(--accent-gold);
+}
+
+.path-percent-label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--text-secondary);
+    min-width: 36px;
+    text-align: right;
+}
+
+.finished-color {
+    color: var(--accent-gold);
+}
+
+/* --- Smart Review Chips Queue --- */
+.review-chips-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.review-chip {
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-light);
+    padding: 10px 18px;
+    border-radius: var(--radius-xl);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    box-shadow: var(--shadow-soft);
+}
+
+/* --- Empty States Achievement Placeholder --- */
+.achievements-empty-container {
+    background-color: var(--surface-white);
+    border: 1px dashed var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-icon {
+    font-size: 1.5rem;
+    opacity: 0.35;
+}
+
+.memory-margin {
+    margin-bottom: 12px;
+}
+
+/* --- FIXED BOTTOM NAVBAR COMPONENT --- */
+/* Tab Bar Active State Styles */
+.active-tab .active-tab 
+
+/* =========================================================================
+   SECTION 3: LEARNING HUB (from learn.css)
+   ========================================================================= */
+
+/* Learn Hub Framework Colors */
+.learn-hub {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 90px; /* Space so content doesn't get hidden under bottom navigation bar */
+}
+
+/* Header & Search UI elements */
+.hub-header {
+    background-color: var(--bg-primary);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 12px 0 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    font-size: 0.9rem;
+    outline: none;
+    background-color: var(--surface-card);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+/* Pill Toggle Control switches */
+.toggle-container {
+    background-color: #e3eae5;
+    padding: 4px;
+    border-radius: 25px;
+    display: flex;
+}
+
+.toggle-btn {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 21px;
+    background: transparent;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.toggle-btn.active {
+    background-color: var(--surface-card);
+    color: var(--brand-green);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* Progress Block Banner */
+.progress-card {
+    background: linear-gradient(135deg, #1e5235, #2d7a4f);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 4px 15px rgba(30, 82, 53, 0.15);
+}
+
+.progress-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.progress-percentage {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 8px 14px;
+    border-radius: 12px;
+}
+
+.progress-text p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.progress-text .english-text {
+    opacity: 0.8;
+    font-size: 0.75rem;
+    margin-top: 2px;
+}
+
+.resume-btn {
+    background-color: #ffffff;
+    color: var(--brand-green);
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* Continuous Timeline Paths */
+.path-stream {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 8px;
+}
+
+.path-stream::before {
+    content: '';
+    position: absolute;
+    left: 21px;
+    top: 24px;
+    bottom: 24px;
+    width: 2px;
+    background-color: var(--border-color);
+    z-index: 1;
+}
+
+/* Category Nodes Accordions */
+.module-accordion {
+    background-color: var(--surface-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.module-header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    gap: 14px;
+    cursor: pointer;
+}
+
+.timeline-node {
+    width: 26px;
+    height: 26px;
+    background-color: var(--bg-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    border: 1px solid var(--border-color);
+}
+
+.module-accordion.completed .timeline-node {
+    background-color: #e8f5e9;
+    border-color: var(--status-success);
+}
+
+.module-accordion.active .timeline-node {
+    background-color: var(--brand-green-light);
+    border-color: var(--brand-green);
+}
+
+.pulse {
+    animation: greenGlow 2s infinite alternate;
+}
+
+@keyframes greenGlow {
+    from { box-shadow: 0 0 2px var(--brand-green); }
+    to { box-shadow: 0 0 8px var(--brand-green); }
+}
+
+.module-title-area {
+    flex: 1;
+}
+
+.module-meta {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    display: block;
+}
+
+.module-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.accordion-arrow {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+/* Expanded Grid Child List Containers */
+.lessons-container {
+    background-color: #fafbfb;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.lesson-row {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    gap: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.lesson-row:last-child {
+    border-bottom: none;
+}
+
+.lesson-icon {
+    font-size: 1.1rem;
+    width: 34px;
+    height: 34px;
+    background-color: var(--surface-card);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+}
+
+.lesson-details {
+    flex: 1;
+}
+
+.lesson-details h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.lesson-meta {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.lesson-status {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.lesson-row.completed .lesson-status {
+    color: var(--status-success);
+}
+
+.lesson-row.current {
+    background-color: #ffffff;
+    border-left: 3px solid var(--brand-green);
+}
+
+.lesson-row.current .lesson-status.next-arrow {
+    color: var(--brand-green);
+}
+
+.lesson-row.locked {
+    opacity: 0.45;
+}
+
+/* Fixed App Style Bottom Navigation Bar UI Layout */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 480px;
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0 calc(10px + env(safe-area-inset-bottom));
+    z-index: 100;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.03);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-muted);
+    gap: 4px;
+}
+
+.nav-icon {
+    font-size: 1.3rem;
+}
+
+.nav-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.nav-item.active {
+    color: var(--brand-green);
+}
+
+/* Top Row Layout Container */
+.header-top-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.search-wrapper {
+    flex: 1; /* Automatically stretches to take up remaining space */
+}
+
+/* Compact Language Switcher Pill */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--surface-card);
+    border: 1px solid var(--border-color);
+    padding: 12px 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    height: 48px; /* Perfectly matches the input height */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    transition: background-color 0.15s ease;
+}
+
+.lang-toggle:hover {
+    background-color: var(--brand-green-light);
+}
+
+.lang-globe {
+    font-size: 1.1rem;
+}
+
+.lang-text {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--brand-green);
+    letter-spacing: 0.5px;
+}
+
+/* Container Display Control toggles */
+.view-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.view-container/* --- VIEW A: PATH TREE DESIGN --- */
+.active-track-section {
+    background: var(--surface-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.01);
+}
+
+.track-hierarchy-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.track-arrow {
+    font-size: 0.7rem;
+    opacity: 0.6;
+}
+
+.track-child {
+    color: var(--brand-green);
+}
+
+.focused-tree-card {
+    padding-left: 8px;
+    border-left: 2px dashed #cbd5e1; /* Vertical track connector string line */
+    margin-left: 6px;
+}
+
+.tree-branch-root {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.tree-leaves-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 4px;
+}
+
+.tree-leaf {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    padding: 4px 0;
+}
+
+.leaf-status {
+    font-weight: bold;
+    width: 16px;
+}
+
+.tree-leaf.completed {
+    color: var(--status-success);
+    font-weight: 600;
+}
+
+.tree-leaf.current {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.tree-leaf.locked {
+    color: var(--text-muted);
+    opacity: 0.6;
+}
+
+/* --- VIEW B: GLOBAL TREE CATALOG DESIGN --- */
+.global-tree-branch {
+    background: var(--surface-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.branch-trigger {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.branch-icon {
+    font-size: 1.2rem;
+}
+
+.branch-name {
+    flex: 1;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.branch-chevron {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Sub-branch expansion layouts */
+.branch-content {
+    background: #fafbfb;
+    border-top: 1px solid var(--border-color);
+    padding: 12px 16px 12px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sub-trigger {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+/* Nested Visibility Controls */
+.nested-hidden {
+    display: none !important;
+}
+
+/* Sub-branch interactive row styling */
+.sub-branch-block {
+    margin-bottom: 8px;
+}
+
+.sub-branch-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+    padding: 10px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.sub-branch-trigger:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.sub-chevron {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    transition: transform 0.2s ease;
+}
+
+/* --- Language Nodes Grid Layout --- */
+/* --- Global Grid Alignment (Matching Landing Page Layout) --- */
+/* --- Global Grid Alignment (Matching Landing Page Layout) --- */
+.languages-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default single column on extra narrow screens */
+    gap: 16px;
+    padding: 12px 0 16px 12px;
+    border-left: 2px solid var(--border-color);
+    margin-left: 8px;
+}
+
+/* Track Card Architecture Matching Homepage */
+.track-card {
+    background: var(--surface-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    text-align: left;
+}
+
+.track-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--brand-green);
+}
+
+.track-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    background-color: var(--brand-green-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.track-card-icon {
+    font-size: 1.3rem;
+}
+
+.track-card-content h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.track-card-content p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* --- New Learn-Specific Meta Labels --- */
+.track-badge-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.track-meta-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+}
+
+.track-meta-tag.beginner {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+/* Level Section Divider Labels spanning full width across the grid */
+.level-divider-tag {
+    grid-column: 1 / -1; /* Forces the label text to span completely across both grid column tracks */
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--brand-green);
+    letter-spacing: 1px;
+    background-color: var(--brand-green-light);
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+    border-left: 3px solid var(--brand-green);
+}
+
+/* Metadata Badge Dynamic Color Variances */
+.track-meta-tag.intermediate {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.track-meta-tag.master {
+    background-color: #ede7f6;
+    color: #512da8;
+}
+
+.track-lesson-count {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+/* --- Discovery Sections Architecture --- */
+.discovery-section {
+    margin: 24px 0;
+    padding-left: 4px;
+}
+
+.section-header-row h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 12px;
+}
+
+/* Horizontal Fast-Swipe Container */
+.horizontal-scroll-shelf {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding: 4px 4px 12px 4px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Hides native scrollbars on modern layouts */
+}
+
+.horizontal-scroll-shelf::-webkit-scrollbar {
+    display: none; /* Hides scrollbar track on Android/Chrome webviews */
+}
+
+/* Small Dynamic Display Cards */
+.shelf-card {
+    flex: 0 0 160px; /* Forces uniform compact card shapes */
+    scroll-snap-align: start;
+    background: var(--surface-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.01);
+}
+
+.shelf-card-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.55rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 3px 6px;
+    border-radius: 4px;
+    background: #ffebee;
+    color: #c62828;
+}
+
+.shelf-card-badge.green {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.shelf-card-badge.purple {
+    background: #ede7f6;
+    color: #512da8;
+}
+
+.shelf-icon {
+    font-size: 1.5rem;
+    margin-top: 4px;
+}
+
+.shelf-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-main);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.shelf-meta {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+}
+
+/* Margin offset utility to prevent content clipping behind bottom navigation bar */
+.fallback-margin {
+    margin-bottom: 90px;
+}
+
+/* Responsive Scaling for Larger Handsets & Screens */
+@media (min-width: 360px) {
+    .languages-grid {
+        grid-template-columns: repeat(2, 1fr); /* Clean 2-column grid pattern matches homepage on mobile views */
+    }
+}
+
+.lang-node-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--brand-green);
+}
+
+.lang-logo {
+    font-size: 1.2rem;
+}
+
+.lang-node-card h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+/* Rotations for chevron indicators when branches are active */
+.rotate-down {
+    transform: rotate(90deg);
+}
+/* Custom display rule utilities to prevent style overrides */
+.view-container.nested-hidden {
+    display: none !important;
+}
+
+/* Fluid transition wrapper for your chevron rotations */
+.branch-chevron, .sub-chevron {
+    display: inline-block;
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rotate-down {
+    transform: rotate(90deg);
+}
+
+/* --- Desktop Media Query (Adaptive Layout Enhancement) --- */
+@media screen and (min-width: 768px) {
+    /* 1. Expand the main layout wrapper and remove rigid phone width limits */
+    .learn-hub {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 24px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 24px;
+    }
+
+    /* 2. Force the header and progress bar to span full width across the desktop view */
+    .hub-header, 
+    .progress-card {
+        grid-column: span 12;
+    }
+
+    /* 3. Place the main paths or tree view on the left side (taking up 8 out of 12 columns) */
+    .view-container {
+        grid-column: span 8;
+        margin-bottom: 0;
+    }
+
+    /* 4. Convert our horizontal swiping discovery shelves into a beautiful right-hand sidebar layout */
+    .discovery-section {
+        grid-column: span 4;
+        margin: 0;
+        background: var(--surface-card);
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        padding: 20px;
+        height: fit-content;
+    }
+
+    /* 5. Change the shelf from horizontal swiping to a clean vertical stack for desktop users */
+    .horizontal-scroll-shelf {
+        flex-direction: column;
+        overflow-x: visible;
+        gap: 16px;
+        padding: 0;
+    }
+
+    /* 6. Let the cards expand fully to fill the width of the desktop sidebar */
+    .shelf-card {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    /* 7. Hide the mobile bottom bar on desktop screen sizes */
+    .bottom-nav {
+        display: none;
+    }
+}
+
+/* =========================================================================
+   SECTION 4: LESSON READER (from lesson.css)
+   ========================================================================= */
+
+/* --- Core Lesson Variables & Theme Fallbacks --- */
+/* --- Top Fixed Header Panel --- */
+.lesson-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: var(--surface-card); 
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.breadcrumb-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-back-arrow {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text-main);
+    font-weight: bold;
+}
+
+.breadcrumb-path {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.path-divider {
+    opacity: 0.5;
+}
+
+.path-leaf {
+    color: var(--text-main);
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.progress-container {
+    width: 60px;
+    height: 6px;
+    background: var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--brand-green);
+}
+
+.lang-toggle {
+    background: var(--border-color);
+    border: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- Replaced Topic Header Layout --- */
+.lesson-topic-header {
+    padding: 4px 0;
+    margin: 16px 0;
+    background-color: transparent;
+}
+
+.topic-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- Main Workspace Layout --- */
+.lesson-workspace {
+    flex: 1;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px 120px 16px;
+    box-sizing: border-box;
+}
+
+.lesson-card {
+    background-color: var(--surface-card); 
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.lesson-meta-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--tag-blue);
+    background: rgba(37, 99, 235, 0.08);
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.lesson-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.3;
+    margin-top: 0;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 18px 0;
+}
+
+.lesson-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-main);
+    margin-bottom: 16px;
+}
+
+/* Code Blocks Layout */
+.code-example-container {
+    background: var(--code-bg);
+    border-radius: 12px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.code-header {
+    background: #2d2d34;
+    color: #a6accd;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    text-transform: uppercase;
+}
+
+.code-display {
+    padding: 16px;
+    margin: 0;
+    overflow-x: auto;
+}
+
+.code-display code {
+    font-family: monospace;
+    color: #f8f8f2;
+    font-size: 0.9rem;
+}
+
+.tag-color {
+    color: #ff557f;
+    font-weight: 700;
+}
+
+.explanation-box {
+    background: var(--bg-main);
+    border-radius: 12px;
+    padding: 16px;
+    border-left: 4px solid var(--tag-blue);
+}
+
+.explanation-box h3 {
+    margin-top: 0;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.explanation-box ul {
+    margin: 8px 0 0 0;
+    padding-left: 20px;
+}
+
+.explanation-box li {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.code-inline {
+    font-family: monospace;
+    background: var(--border-color);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* --- Quiz Component Layout --- */
+.quick-check-container {
+    margin-top: 28px;
+}
+
+.quick-check-header {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.quiz-card {
+    background-color: var(--surface-card); 
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.quiz-question {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.quiz-options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px;
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+.option-marker {
+    font-weight: 800;
+    background: var(--border-color);
+    color: var(--text-main);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+}
+
+.option-btn.correct { background: #e8f5e9; border-color: #2e7d32; color: #1b5e20; }
+.option-btn.correct .option-marker { background: #2e7d32; color: #fff; }
+.option-btn.wrong { background: #ffebee; border-color: #c62828; color: #b71c1c; }
+.option-btn.wrong .option-marker { background: #c62828; color: #fff; }
+
+/* --- Fixed Bottom Command Panel --- */
+.lesson-control-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--surface-card); 
+    border-top: 1px solid var(--border-color);
+    padding: 12px 16px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    z-index: 900; 
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.navigation-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px; /* Increased slightly for cleaner splitting layout */
+}
+
+.control-btn {
+    flex: 1;
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+/* Highlighted the primary forward navigation key to stand out */
+.next-btn {
+    background: var(--brand-green);
+    color: var(--surface-card);
+    border: none;
+}
+
+/* --- FLOATING ACTION BUTTON (FAB) --- */
+.contents-floating-fab {
+    position: fixed;
+    bottom: 90px; 
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--brand-green); /* Swapped from text-main to brand primary green */
+    color: #ffffff; /* Explicit contrast match */
+    border: none;   /* Removed dark border for a modern clean look */
+    box-shadow: 0 4px 14px rgba(76, 175, 80, 0.35); /* Tailored color glowing shadow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 940; 
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contents-floating-fab:active {
+    transform: scale(0.92);
+}
+
+.fab-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+    margin-top: -2px; 
+}
+
+/* --- LEFT SIDEBAR SLIDING SYSTEM --- */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); 
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    z-index: 950;
+}
+
+.sidebar-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.contents-left-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    max-width: 80vw;
+    background-color: var(--surface-card); 
+    border-right: 1px solid var(--border-color);
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000; 
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.15);
+}
+
+.contents-left-sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px 10px 20px;
+    background-color: var(--surface-card);
+    color: var(--text-main);
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.close-sidebar-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+/* Sidebar Progress UI Panel Layout */
+.sidebar-progress-panel {
+    padding: 0 20px 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--surface-card);
+}
+
+.sidebar-progress-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.sidebar-progress-meta .progress-label {
+    color: var(--text-muted);
+}
+
+.sidebar-progress-meta .progress-percentage {
+    color: var(--brand-green); 
+}
+
+.sidebar-progress-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--border-color);
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.sidebar-progress-fill {
+    width: 33%; 
+    height: 100%;
+    background: linear-gradient(90deg, var(--brand-green), #8bc34a);
+    border-radius: 99px;
+}
+
+.sidebar-scroll-.category-title {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.subcategory-trigger {
+    font-size: 0.95rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.sidebar-nodes-list {
+    list-style: none;
+    padding-left: 12px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.node-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.node-status {
+    font-weight: bold;
+    width: 14px;
+}
+
+.node-item.completed { color: #2e7d32; }
+.node-item.active { color: var(--tag-blue); font-weight: 800; }
+.node-item.locked { color: var(--text-muted); opacity: 0.5; }
+
+@media screen and (min-width: 768px) {
+    .lesson-title { font-size: 1.7rem; }
+}
+
+/* =========================================================================
+   SECTION 5: DICTIONARY (from dictionary.css)
+   ========================================================================= */
+
+/* --- Core Layout Dictionary Elements Layout Extensions --- */
+
+.dict-workspace {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 24px 16px 100px 16px; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Typography Metadata Styling --- */
+.dict-meta-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--primary-green);
+    letter-spacing: 0.8px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.dict-main-title {
+    margin: 0 0 12px 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.dict-description {
+    margin: 0 0 24px 0;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* --- Search Input Form Field Controls --- */
+.search-box-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+.dict-search-input {
+    width: 100%;
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-light);
+    color: var(--text-dark);
+    padding: 14px 16px 14px 44px;
+    border-radius: var(--radius-xl);
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: var(--shadow-soft);
+    transition: border-color 0.2s ease;
+}
+
+.dict-search-input:focus {
+    border-color: var(--primary-green);
+}
+
+/* --- Category Horizontally Scrollable Filters --- */
+.filter-chips-carousel {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 4px 4px 12px 4px;
+    margin-bottom: 16px;
+    scrollbar-width: none; /* Hide scrollbar for standard Firefox */
+}
+
+.filter-chips-carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome / Safari */
+}
+
+.chip {
+    white-space: nowrap;
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-light);
+    color: var(--text-dark);
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.2s ease;
+}
+
+.active-chip {
+    background-color: var(--primary-green);
+    color: var(--surface-white);
+    border-color: var(--primary-green);
+}
+
+/* --- Results Counter Text --- */
+.results-counter {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+    padding-left: 4px;
+}
+
+.count-num {
+    color: var(--text-dark);
+}
+
+/* --- Accordion Functional Layout Blocks --- */
+.dict-accordion-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dict-card {
+    background-color: var(--surface-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+}
+
+.dict-card-header {
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.term-book-icon {
+    font-size: 1.15rem;
+    color: var(--primary-green);
+    opacity: 0.8;
+}
+
+.term-title-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.term-english {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.term-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    background-color: var(--bg-warm);
+    color: var(--text-secondary);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-light);
+}
+
+.term-hausa-translation {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-green);
+}
+
+.accordion-arrow {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: bold;
+}
+
+/* --- Collapsible Content Body Block Rules --- */
+.dict-card-body {
+    display: none;
+    padding: 0 20px 20px 48px;
+    border-top: 1px dashed var(--border-light);
+}
+
+/* Expanded Toggle Interactivity Hook */
+.expanded-card .dict-card-body {
+    display: block;
+    padding-top: 16px;
+}
+
+.expanded-card {
+    border-color: rgba(46, 125, 50, 0.25);
+}
+
+.body-section-label {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.definition-text {
+    margin: 0 0 14px 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.example-code-block {
+    background-color: var(--bg-warm);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 12px 16px;
+    /* Clean, modern monospace stack copied from premium UI systems */
+    font-family: ui-monospace, SFMono-Regular, SF Pro Text, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+    font-weight: 500;
+    letter-spacing: -0.2px;
+}
+
+.memory-margin {
+    margin-bottom: 12px;
+}
+
+
+
+/* =========================================================================
+   MAIN PAGES WORKSPACE RESPONSIVE LAYOUT
+   ========================================================================= */
+
+.page-workspace {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+/* Dashboard, Dictionary, Profile workspace */
+.dash-workspace,
+.dict-workspace,
+.profile-workspace {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 20px 16px 100px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Learn hub workspace */
+.learn-hub {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 90px;
+}
+
+/* Index main content */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+
+/* =========================================================================
+   TABLET LAYOUT (768px–1023px)
+   ========================================================================= */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .dash-workspace,
+    .dict-workspace,
+    .profile-workspace {
+        max-width: 600px;
+        padding: 24px 24px 100px 24px;
+    }
+
+    .learn-hub {
+        max-width: 600px;
+        padding: 20px 24px 100px 24px;
+    }
+
+    .main-content {
+        padding: 32px 30px;
+    }
+}
+
+/* =========================================================================
+   DESKTOP LAYOUT (≥1024px)
+   ========================================================================= */
+
+@media screen and (min-width: 1024px) {
+    .dash-workspace,
+    .dict-workspace,
+    .profile-workspace {
+        max-width: 720px;
+        padding: 28px 32px 100px 32px;
+    }
+
+    .learn-hub {
+        max-width: 900px;
+        padding: 24px 32px 100px 32px;
+    }
+
+    .main-content {
+        max-width: 1200px;
+        padding: 40px 40px;
+    }
+
+    /* App bottom nav: Better spacing on desktop */
+    .app-bottom-nav {
+        padding: 12px 20px 24px 20px;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .nav-tab {
+        flex: 0 0 auto;
+        min-width: 80px;
+    }
+}
+
+/* =========================================================================
+   LARGE DESKTOP (≥1400px)
+   ========================================================================= */
+
+@media screen and (min-width: 1400px) {
+    .dash-workspace,
+    .dict-workspace,
+    .profile-workspace {
+        max-width: 800px;
+    }
+
+    .learn-hub {
+        max-width: 1100px;
+    }
+
+    .main-content {
+        max-width: 1400px;
+    }
+}
+
+
+/* =========================================================================
+   RESPONSIVE LESSON LAYOUT SYSTEM
+   Desktop: Sidebar always visible | Mobile/Tablet: Overlay drawer
+   ========================================================================= */
+
+/* --- Base Lesson Layout (Mobile First) --- */
+.lesson-page-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.lesson-main-layout {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Sidebar - Mobile: Hidden off-screen overlay */
+.contents-left-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    max-width: 80vw;
+    background-color: var(--surface-card);
+    border-right: 1px solid var(--border-color);
+    transform: translateX(-100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.15);
+}
+
+.contents-left-sidebar.open {
+    transform: translateX(0);
+}
+
+/* Lesson workspace - Mobile */
+.lesson-workspace {
+    flex: 1;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 16px 120px 16px;
+    box-sizing: border-box;
+    transition: margin-left 0.35s ease;
+}
+
+/* Floating FAB - Mobile */
+.contents-floating-fab {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--brand-green);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 14px rgba(76, 175, 80, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 940;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Bottom control panel - Mobile */
+.lesson-control-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--surface-card);
+    border-top: 1px solid var(--border-color);
+    padding: 12px 16px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    z-index: 900;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================================================================
+   DESKTOP LAYOUT (>=1024px): Sidebar Always Visible
+   ========================================================================= */
+
+@media screen and (min-width: 1024px) {
+    /* Hide overlay on desktop - sidebar is permanent */
+    .sidebar-overlay {
+        display: none !important;
+    }
+
+    /* Sidebar: Always visible, part of layout flow */
+    .contents-left-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 280px;
+        transform: translateX(0) !important;
+        box-shadow: none;
+        border-right: 1px solid var(--border-color);
+        z-index: 100;
+    }
+
+    /* Lesson header: Full width, but content shifted */
+    .lesson-header {
+        position: sticky;
+        top: 0;
+        left: 280px;
+        right: 0;
+        width: calc(100% - 280px);
+        margin-left: 280px;
+        z-index: 100;
+    }
+
+    /* Main layout: Sidebar + Content side by side */
+    .lesson-main-layout {
+        flex-direction: row;
+        margin-left: 280px;
+    }
+
+    /* Workspace: Centered within content area */
+    .lesson-workspace {
+        flex: 1;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 32px 100px 32px;
+    }
+
+    /* Bottom control panel: Full width, shifted right */
+    .lesson-control-panel {
+        left: 280px;
+        width: calc(100% - 280px);
+        padding: 16px 32px 24px 32px;
+    }
+
+    /* Hide mobile-only FAB on desktop (sidebar is always visible) */
+    .contents-floating-fab {
+        display: none;
+    }
+}
+
+/* =========================================================================
+   TABLET LAYOUT (768px-1023px): Overlay Sidebar, Centered Content
+   ========================================================================= */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .lesson-workspace {
+        max-width: 700px;
+        padding: 0 24px 120px 24px;
+    }
+
+    .lesson-control-panel {
+        padding: 14px 24px 28px 24px;
+    }
+}
+
+/* =========================================================================
+   LARGE DESKTOP (>=1400px): Max Content Width
+   ========================================================================= */
+
+@media screen and (min-width: 1400px) {
+    .lesson-workspace {
+        max-width: 1000px;
+    }
+}
+
+/* =========================================================================
+   ANIMATIONS & TRANSITIONS
+   ========================================================================= */
+
+/* --- Card Hover Effects --- */
+.track-card, .sub-card, .shelf-card, .why-card, .dict-card {
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.2s ease;
+}
+
+.track-card:hover, .sub-card:hover, .shelf-card:hover, .why-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.dict-card:hover {
+    border-color: rgba(46, 125, 50, 0.3);
+}
+
+/* --- Accordion Expand/Collapse Animation --- */
+.branch-content, .languages-grid {
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease,
+                padding 0.3s ease;
+    max-height: 2000px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.branch-content.nested-hidden, .languages-grid.nested-hidden {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* --- Chevron Rotation --- */
+.branch-chevron, .sub-chevron, .accordion-arrow {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Sidebar Slide Animation --- */
+.contents-left-sidebar {
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-overlay {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* --- Progress Bar Fill Animation --- */
+.goal-progress-fill, .sidebar-progress-fill, .mini-fill, .progress-fill {
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Button Hover/Active States --- */
+.control-btn, .option-btn, .resume-btn, .btn-primary, .btn-secondary {
+    transition: background-color 0.2s ease,
+                transform 0.15s ease,
+                box-shadow 0.2s ease;
+}
+
+.control-btn:active, .option-btn:active, .resume-btn:active {
+    transform: scale(0.97);
+}
+
+/* --- Quiz Option Feedback Animation --- */
+.option-btn.correct {
+    animation: correctPulse 0.5s ease;
+}
+
+.option-btn.wrong {
+    animation: wrongShake 0.4s ease;
+}
+
+@keyframes correctPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+@keyframes wrongShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+}
+
+/* --- Page Load Fade-In --- */
+.lesson-workspace, .dash-workspace, .dict-workspace, .profile-workspace {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Stat Card Counter Animation --- */
+.stat-card {
+    animation: fadeInUp 0.4s ease-out backwards;
+}
+
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+.stat-card:nth-child(2) { animation-delay: 0.2s; }
+.stat-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* --- Bottom Nav Tab Bounce --- */
+.nav-tab:active .tab-icon {
+    animation: tabBounce 0.3s ease;
+}
+
+@keyframes tabBounce {
+    0% { transform: translateY(-2px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(-2px); }
+}
+
+/* --- Floating Action Button Pulse --- */
+.contents-floating-fab {
+    animation: fabPulse 2s infinite;
+}
+
+@keyframes fabPulse {
+    0%, 100% { box-shadow: 0 4px 14px rgba(76, 175, 80, 0.35); }
+    50% { box-shadow: 0 4px 20px rgba(76, 175, 80, 0.5); }
+}
+
+/* --- Staggered List Item Animation --- */
+.tree-leaf, .lesson-row, .path-row-item, .dict-card {
+    animation: fadeInUp 0.35s ease-out backwards;
+}
+
+.tree-leaf:nth-child(1) { animation-delay: 0.05s; }
+.tree-leaf:nth-child(2) { animation-delay: 0.1s; }
+.tree-leaf:nth-child(3) { animation-delay: 0.15s; }
+.tree-leaf:nth-child(4) { animation-delay: 0.2s; }
+.tree-leaf:nth-child(5) { animation-delay: 0.25s; }
+
+/* --- Language Icon Hover Spin --- */
+.track-card-icon, .branch-icon {
+    transition: transform 0.3s ease;
+}
+
+.track-card:hover .track-card-icon {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+/* --- Smooth Scroll --- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Loading Skeleton Pulse --- */
+.skeleton {
+    background: linear-gradient(90deg, var(--bg-warm) 25%, #f0f0f0 50%, var(--bg-warm) 75%);
+    background-size: 200% 100%;
+    animation: skeletonLoad 1.5s infinite;
+}
+
+@keyframes skeletonLoad {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+
+/* =========================================================================
+   LANGUAGE SVG LOGOS
+   ========================================================================= */
+
+.lang-logo {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lang-logo:hover {
+    transform: scale(1.15) rotate(-4deg);
+}
+
+.track-card .lang-logo {
+    width: 32px;
+    height: 32px;
+}
+
+.shelf-card .lang-logo {
+    width: 24px;
+    height: 24px;
+}
+
+/* Logo wrapper for consistent sizing */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--brand-green-light);
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.track-card .logo-wrapper {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+}
+
+/* Sidebar node icons */
+.node-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+
+/* Dashboard resume panel icons */
+.resume-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+/* Path row icons */
+.path-icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Review chip icons */
+.chip-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+
+/* =========================================================================
+   INTERACTIVE ANIMATIONS & MICRO-INTERACTIONS
+   ========================================================================= */
+
+/* --- Ripple Effect on Click (all buttons, cards, nav tabs) --- */
+@keyframes ripple {
+    0% { transform: scale(0); opacity: 0.4; }
+    100% { transform: scale(4); opacity: 0; }
+}
+
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255,255,255,0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1) translate(-50%, -50%);
+    transform-origin: 50% 50%;
+}
+
+.ripple:active::after {
+    animation: ripple 0.6s ease-out;
+}
+
+/* --- Card Lift on Hover with Shadow --- */
+.track-card, .sub-card, .shelf-card, .why-card, .dict-card,
+.welcome-surface-card, .stat-card, .metric-card,
+.profile-identity-card, .settings-list-wrapper {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.3s ease,
+                border-color 0.2s ease;
+}
+
+.track-card:hover, .sub-card:hover, .shelf-card:hover, .why-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+    border-color: rgba(46, 125, 50, 0.2);
+}
+
+.dict-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border-color: rgba(46, 125, 50, 0.25);
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Nav Tab Press Animation --- */
+.nav-tab {
+    transition: transform 0.15s ease, color 0.2s ease;
+    position: relative;
+}
+
+.nav-tab::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--primary-green);
+    border-radius: 2px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-tab.active::before {
+    width: 24px;
+    left: calc(50% - 12px);
+}
+
+.nav-tab:active {
+    transform: scale(0.92);
+}
+
+.nav-tab .tab-icon {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.nav-tab:hover .tab-icon {
+    transform: translateY(-4px) scale(1.1);
+}
+
+/* --- Button Press & Hover --- */
+.btn-primary, .resume-btn, .control-btn, .option-btn,
+.chip, .review-chip, .settings-row-item {
+    transition: transform 0.15s ease,
+                background-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.btn-primary:active, .resume-btn:active, .control-btn:active {
+    transform: scale(0.96);
+}
+
+.btn-primary:hover, .resume-btn:hover {
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
+}
+
+/* --- Chip/Tag Hover --- */
+.chip, .review-chip {
+    transition: transform 0.2s ease,
+                background-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.chip:hover, .review-chip:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.chip:active, .review-chip:active {
+    transform: scale(0.95);
+}
+
+/* --- Accordion Expand/Collapse with Height Animation --- */
+.dict-card-body {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease,
+                padding 0.3s ease;
+}
+
+.expanded-card .dict-card-body {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.dict-card-header {
+    transition: background-color 0.2s ease;
+}
+
+.dict-card-header:hover {
+    background-color: rgba(46, 125, 50, 0.03);
+}
+
+.accordion-arrow {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expanded-card .accordion-arrow {
+    transform: rotate(180deg);
+}
+
+/* --- Tree Branch Expand Animation --- */
+.branch-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.35s ease,
+                padding 0.35s ease;
+}
+
+.branch-content:not(.nested-hidden) {
+    max-height: 3000px;
+    opacity: 1;
+}
+
+.languages-grid {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease,
+                padding 0.3s ease;
+}
+
+.languages-grid:not(.nested-hidden) {
+    max-height: 2000px;
+    opacity: 1;
+}
+
+.branch-chevron, .sub-chevron {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Sidebar Slide-In Animation --- */
+.contents-left-sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contents-left-sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar-overlay {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- Page Transition Fade-In --- */
+@keyframes pageEnter {
+    0% { opacity: 0; transform: translateY(16px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    animation: pageEnter 0.4s ease-out;
+}
+
+/* --- Staggered Children Animation --- */
+@keyframes staggerIn {
+    0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.tree-leaf, .lesson-row, .path-row-item, .dict-card,
+.sub-card, .shelf-card, .why-card {
+    animation: staggerIn 0.4s ease-out backwards;
+}
+
+.tree-leaf:nth-child(1) { animation-delay: 0.05s; }
+.tree-leaf:nth-child(2) { animation-delay: 0.1s; }
+.tree-leaf:nth-child(3) { animation-delay: 0.15s; }
+.tree-leaf:nth-child(4) { animation-delay: 0.2s; }
+.tree-leaf:nth-child(5) { animation-delay: 0.25s; }
+.tree-leaf:nth-child(6) { animation-delay: 0.3s; }
+.tree-leaf:nth-child(7) { animation-delay: 0.35s; }
+.tree-leaf:nth-child(8) { animation-delay: 0.4s; }
+.tree-leaf:nth-child(9) { animation-delay: 0.45s; }
+.tree-leaf:nth-child(10) { animation-delay: 0.5s; }
+.tree-leaf:nth-child(11) { animation-delay: 0.55s; }
+.tree-leaf:nth-child(12) { animation-delay: 0.6s; }
+.tree-leaf:nth-child(13) { animation-delay: 0.65s; }
+
+.lesson-row:nth-child(1) { animation-delay: 0.05s; }
+.lesson-row:nth-child(2) { animation-delay: 0.1s; }
+.lesson-row:nth-child(3) { animation-delay: 0.15s; }
+
+.path-row-item:nth-child(1) { animation-delay: 0.05s; }
+.path-row-item:nth-child(2) { animation-delay: 0.1s; }
+.path-row-item:nth-child(3) { animation-delay: 0.15s; }
+
+.sub-card:nth-child(1) { animation-delay: 0.05s; }
+.sub-card:nth-child(2) { animation-delay: 0.1s; }
+.sub-card:nth-child(3) { animation-delay: 0.15s; }
+.sub-card:nth-child(4) { animation-delay: 0.2s; }
+
+.shelf-card:nth-child(1) { animation-delay: 0.05s; }
+.shelf-card:nth-child(2) { animation-delay: 0.1s; }
+
+.why-card:nth-child(1) { animation-delay: 0.05s; }
+.why-card:nth-child(2) { animation-delay: 0.1s; }
+.why-card:nth-child(3) { animation-delay: 0.15s; }
+.why-card:nth-child(4) { animation-delay: 0.2s; }
+
+/* --- Progress Bar Fill Animation --- */
+@keyframes progressFill {
+    0% { width: 0; }
+}
+
+.goal-progress-fill, .sidebar-progress-fill, .mini-fill {
+    animation: progressFill 1s cubic-bezier(0.4, 0, 0.2, 1) backwards;
+}
+
+/* --- Quiz Feedback Animations --- */
+@keyframes correctPop {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.05); background-color: #c8e6c9; }
+    100% { transform: scale(1); }
+}
+
+@keyframes wrongShake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+}
+
+.option-btn.correct {
+    animation: correctPop 0.5s ease;
+    border-color: #2e7d32 !important;
+    background-color: #e8f5e9 !important;
+}
+
+.option-btn.wrong {
+    animation: wrongShake 0.5s ease;
+    border-color: #c62828 !important;
+    background-color: #ffebee !important;
+}
+
+/* --- Floating Action Button Pulse --- */
+@keyframes fabGlow {
+    0%, 100% { box-shadow: 0 4px 14px rgba(76, 175, 80, 0.35); }
+    50% { box-shadow: 0 6px 24px rgba(76, 175, 80, 0.5); }
+}
+
+.contents-floating-fab {
+    animation: fabGlow 2s ease-in-out infinite;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.contents-floating-fab:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.contents-floating-fab:active {
+    transform: scale(0.9);
+}
+
+/* --- Settings Row Slide Effect --- */
+.settings-row-item {
+    transition: background-color 0.2s ease,
+                padding-left 0.2s ease,
+                transform 0.15s ease;
+}
+
+.settings-row-item:hover {
+    background-color: rgba(46, 125, 50, 0.04);
+    padding-left: 8px;
+}
+
+.settings-row-item:active {
+    transform: scale(0.98);
+}
+
+/* --- Search Input Focus Animation --- */
+.search-input, .dict-search-input, #universal-search {
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                transform 0.2s ease;
+}
+
+.search-input:focus, .dict-search-input:focus, #universal-search:focus {
+    transform: scale(1.01);
+    box-shadow: 0 4px 16px rgba(46, 125, 50, 0.1);
+}
+
+/* --- Language Toggle Spin --- */
+.lang-toggle-badge, .lang-toggle {
+    transition: transform 0.3s ease, background-color 0.2s ease;
+}
+
+.lang-toggle-badge:active, .lang-toggle:active {
+    transform: rotate(180deg) scale(0.9);
+}
+
+/* --- Logo Hover Spin --- */
+.lang-logo, .track-card-icon {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.track-card:hover .lang-logo,
+.track-card:hover .track-card-icon {
+    transform: scale(1.2) rotate(-8deg);
+}
+
+/* --- Path Row Hover Slide --- */
+.path-row-item {
+    transition: background-color 0.2s ease,
+                padding-left 0.2s ease,
+                transform 0.15s ease;
+}
+
+.path-row-item:hover {
+    background-color: rgba(46, 125, 50, 0.03);
+    padding-left: 8px;
+}
+
+/* --- Metric Card Number Count-Up Placeholder --- */
+@keyframes countUp {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.stat-value, .profile-stat-val {
+    animation: countUp 0.6s ease-out backwards;
+}
+
+.stat-value:nth-child(1) { animation-delay: 0.1s; }
+.stat-value:nth-child(2) { animation-delay: 0.2s; }
+
+/* --- Hero Badge Pulse --- */
+@keyframes badgePulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.hero-badge, .section-badge {
+    animation: badgePulse 3s ease-in-out infinite;
+}
+
+/* --- Journey Step Connect Animation --- */
+@keyframes flowPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
+
+.flow-line {
+    animation: flowPulse 2s ease-in-out infinite;
+}
+
+/* --- Scroll Reveal Animation (elements fade in as you scroll) --- */
+@keyframes scrollReveal {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.category-block, .journey-step, .discovery-section {
+    animation: scrollReveal 0.5s ease-out backwards;
+}
+
+.category-block:nth-child(1) { animation-delay: 0.05s; }
+.category-block:nth-child(2) { animation-delay: 0.1s; }
+.category-block:nth-child(3) { animation-delay: 0.15s; }
+
+/* --- Smooth Scroll Behavior --- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Focus Ring Animation for Accessibility --- */
+*:focus-visible {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+    transition: outline-offset 0.2s ease;
+}
+
+/* --- Skeleton Loading Animation --- */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.skeleton {
+    background: linear-gradient(90deg, var(--bg-warm) 25%, #f0f0f0 50%, var(--bg-warm) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}

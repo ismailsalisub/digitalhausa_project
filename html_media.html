@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalHausa - HTML Media</title>
+
+
+    <link rel="stylesheet" href="design-tokens.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body class="lesson-page-body">
+
+    <!-- Top Navigation Header -->
+    <header class="lesson-header">
+        <div class="breadcrumb-row">
+            <a href="learn.html" class="nav-back-arrow">←</a>
+            <div class="breadcrumb-path">
+                <span class="path-node" data-ha="Sifari" data-en="Programming">Sifari</span>
+                <span class="path-divider">&gt;</span>
+                <span class="path-node" data-ha="Gaban Shafi" data-en="Frontend">Gaban Shafi</span>
+                <span class="path-divider">&gt;</span>
+                <span class="path-node" data-ha="HTML" data-en="HTML">HTML</span>
+                <span class="path-divider">&gt;</span>
+                <span class="path-leaf" data-ha="Gabatarwa" data-en="Introduction">Gabatarwa</span>
+            </div>
+        </div>
+        
+        <div class="header-controls">
+            <div class="progress-container">
+                <div class="progress-fill" style="width: 95%;"></div>
+            </div>
+            <button class="lang-toggle" onclick="toggleLanguageState()">
+                <span class="lang-text">HA</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="lesson-main-layout">
+    <!-- Main Lesson Workspace Layout -->
+    <main class="lesson-workspace">
+        
+        <!-- Localized Topic Title Block -->
+        <div class="lesson-topic-header">
+            <h2 class="topic-title">
+                <span class="hausa-text">Midiya (Audio & Video)</span>
+                <span class="english-text hidden">HTML Media</span>
+            </h2>
+        </div>
+
+        <!-- Core Lesson Card Workspace -->
+        <article class="lesson-card">
+            <div class="lesson-meta-badge">HTML • Midiya (Audio & Video) (HTML Media)</div>
+
+            <h1 class="lesson-title">
+                <span class="hausa-text">Saka Bidiyo da Sauti</span>
+                <span class="english-text hidden">Adding Audio & Video</span>
+            </h1>
+
+            <hr class="divider">
+
+            <section class="lesson-content">
+                <p class="hausa-text">
+                    HTML5 yana ba da damar saka bidiyo da sautin kai tsaye a cikin shafin ba tare da buƙatar Adobe Flash ba. Ana amfani da alamar <code>&lt;video&gt;</code> da <code>&lt;audio&gt;</code>.
+
+Kowane ɗaya yana da kayan shafi kamar <code>src</code>, <code>controls</code>, <code>autoplay</code>, da <code>loop</code> don sarrafa yadda midiya take aiki.
+                </p>
+                <p class="english-text hidden">
+                    HTML5 allows embedding audio and video directly into webpages without needing Adobe Flash. Use the <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> tags.
+
+Each has attributes like <code>src</code>, <code>controls</code>, <code>autoplay</code>, and <code>loop</code> to control how media behaves.
+                </p>
+
+                <!-- Code Example Terminal Box -->
+                <div class="code-example-container">
+                    <div class="code-header">Misali / Example</div>
+                    <pre class="code-display"><code>&lt;<span class="tag-color">video</span> <span class="tag-color">width</span>=&quot;400&quot; <span class="tag-color">controls</span>&gt;
+  &lt;<span class="tag-color">source</span> <span class="tag-color">src</span>=&quot;bidiyo.mp4&quot; <span class="tag-color">type</span>=&quot;video/mp4&quot;&gt;
+  Burauzarku ba ta goyon baya bidiyo.
+&lt;/<span class="tag-color">video</span>&gt;
+
+&lt;<span class="tag-color">audio</span> <span class="tag-color">controls</span>&gt;
+  &lt;<span class="tag-color">source</span> <span class="tag-color">src</span>=&quot;wak.mp3&quot; <span class="tag-color">type</span>=&quot;audio/mpeg&quot;&gt;
+&lt;/<span class="tag-color">audio</span>&gt;</code></pre>
+                </div>
+
+                <!-- Technical Breakdown Explanations -->
+                <div class="explanation-box">
+                    <h3 data-ha="Fahimtar Midiya:" data-en="Understanding Media:">Fahimtar Midiya:</h3>
+                    <ul>
+                        <li>
+                            <strong class="code-inline"><code>&lt;video&gt;</code></strong>: 
+                            <span class="hausa-text">Alamar saka bidiyo.</span>
+                            <span class="english-text hidden">Video element.</span>
+                        </li>
+                        <li>
+                            <strong class="code-inline"><code>&lt;audio&gt;</code></strong>: 
+                            <span class="hausa-text">Alamar saka sautin.</span>
+                            <span class="english-text hidden">Audio element.</span>
+                        </li>
+                        <li>
+                            <strong class="code-inline"><code>controls</code></strong>: 
+                            <span class="hausa-text">Yana nuna madannin kunna/tsayawa.</span>
+                            <span class="english-text hidden">Shows play/pause controls.</span>
+                        </li>
+                        <li>
+                            <strong class="code-inline"><code>&lt;source&gt;</code></strong>: 
+                            <span class="hausa-text">Yana ba da hanyoyi daban-daban na fayil.</span>
+                            <span class="english-text hidden">Provides multiple file formats.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
+        <!-- Quick Check Segment Layout -->
+        <section class="quick-check-container">
+            <div class="quick-check-header" data-ha="Gwajin Fahimta" data-en="Quick Check">Gwajin Fahimta</div>
+            <div class="quiz-card">
+                <p class="quiz-question" data-ha="Wace alama ake amfani da ita don saka bidiyo?" data-en="Which tag is used to embed video?">Wace alama ake amfani da ita don saka bidiyo?</p>
+                
+                <div class="quiz-options-list">
+                    <button class="option-btn" onclick="checkAnswer(this, false)">
+                        <span class="option-marker">A</span>
+                        <span class="option-label" data-ha="&lt;media&gt;" data-en="&lt;media&gt;">&lt;media&gt;</span>
+                    </button>
+                    <button class="option-btn" onclick="checkAnswer(this, false)">
+                        <span class="option-marker">B</span>
+                        <span class="option-label" data-ha="&lt;movie&gt;" data-en="&lt;movie&gt;">&lt;movie&gt;</span>
+                    </button>
+                    <button class="option-btn" onclick="checkAnswer(this, true)">
+                        <span class="option-marker">C</span>
+                        <span class="option-label" data-ha="&lt;video&gt;" data-en="&lt;video&gt;">&lt;video&gt;</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Content Toggler Trigger Button -->
+    <button class="contents-floating-fab" onclick="toggleContentsSidebar()" aria-label="Toggle Table of Contents">
+        <span class="fab-icon">≡</span>
+    </button>
+
+    <!-- Floating Bottom Footer Controls Hub -->
+    <footer class="lesson-control-panel">
+        <div class="navigation-row">
+            <button class="control-btn prev-btn" onclick="window.location.href='html_semantic.html'" data-ha="← Baya" data-en="← Previous">← Baya</button>
+            <button class="control-btn next-btn" onclick="window.location.href='html_project.html'" data-ha="Gaba →" data-en="Next →">Gaba →</button>
+        </div>
+    </footer>
+    </div> <!-- lesson-main-layout -->
+
+    <!-- LEFT-SIDEBAR FLOATING NAVIGATION DRAWER -->
+    <div id="sidebar-overlay" class="sidebar-overlay" onclick="toggleContentsSidebar()"></div>
+    <aside id="contents-sidebar" class="contents-left-sidebar">
+        <div class="sidebar-header">
+            <h3><img class="node-icon" src="icons/html5.svg" alt="HTML"> <span data-ha="Tsarin HTML" data-en="HTML Outline">Tsarin HTML</span></h3>
+            <button class="close-sidebar-btn" onclick="toggleContentsSidebar()">✕</button>
+        </div>
+
+        <!-- Sidebar Progress Panel Track Component -->
+        <div class="sidebar-progress-panel">
+            <div class="sidebar-progress-meta">
+                <span class="progress-label" data-ha="Ci gaba" data-en="Progress">Ci gaba</span>
+                <span class="progress-percentage">95%</span>
+            </div>
+            <div class="sidebar-progress-bar">
+                <div class="sidebar-progress-fill" style="width: 95%;"></div>
+            </div>
+        </div>
+        
+        <div class="sidebar-scroll-body">
+            <div class="sidebar-category">
+                <div class="category-title" data-ha="💻 Sifari" data-en="💻 Programming">💻 Sifari</div>
+                
+                <div class="sidebar-subcategory-block">
+                    <div class="subcategory-trigger">
+                        <span class="chevron">▼</span> <span data-ha="HTML" data-en="HTML">HTML</span>
+                    </div>
+                    
+                    <ul class="sidebar-nodes-list">
+                        <li class="node-item completed" onclick="window.location.href='html_introduction.html'">
+                            <span class="node-status">✓</span> <span data-ha="📘 Gabatarwa" data-en="📘 Intro">📘 Gabatarwa</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_elements.html'">
+                            <span class="node-status">✓</span> <span data-ha="🧱 Sifofin Gida" data-en="🧱 Elements">🧱 Sifofin Gida</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_attributes.html'">
+                            <span class="node-status">✓</span> <span data-ha="🏷️ Kayan Shafi" data-en="🏷️ Attributes">🏷️ Kayan Shafi</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_headings.html'">
+                            <span class="node-status">✓</span> <span data-ha="📰 Kunshiyar Rubutu" data-en="📰 Headings">📰 Kunshiyar Rubutu</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_paragraphs.html'">
+                            <span class="node-status">✓</span> <span data-ha="📝 Sakin Layi" data-en="📝 Paragraphs">📝 Sakin Layi</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_links.html'">
+                            <span class="node-status">✓</span> <span data-ha="🔗 Hanyoyi" data-en="🔗 Links">🔗 Hanyoyi</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_images.html'">
+                            <span class="node-status">✓</span> <span data-ha="🖼️ Hotuna" data-en="🖼️ Images">🖼️ Hotuna</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_lists.html'">
+                            <span class="node-status">✓</span> <span data-ha="📋 Jerarraki" data-en="📋 Lists">📋 Jerarraki</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_tables.html'">
+                            <span class="node-status">✓</span> <span data-ha="📊 Teburori" data-en="📊 Tables">📊 Teburori</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_forms.html'">
+                            <span class="node-status">✓</span> <span data-ha="📋 Fommai" data-en="📋 Forms">📋 Fommai</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_semantic.html'">
+                            <span class="node-status">✓</span> <span data-ha="🏗️ Semantika" data-en="🏗️ Semantic">🏗️ Semantika</span>
+                        </li>
+                        <li class="node-item active" onclick="window.location.href='html_media.html'">
+                            <span class="node-status">►</span> <span data-ha="🎬 Midiya" data-en="🎬 Media">🎬 Midiya</span>
+                        </li>
+                        <li class="node-item locked">
+                            <span class="node-status">○</span> <span data-ha="🏆 Aikin Ƙarshe" data-en="🏆 Project">🏆 Aikin Ƙarshe</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <script src="app.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Change the string 'lesson_id_here' to a unique name for each distinct page file
+        if (typeof completeLessonPage === "function") {
+            completeLessonPage('html_media');
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalHausa - Semantic HTML</title>
+
+
+    <link rel="stylesheet" href="design-tokens.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body class="lesson-page-body">
+
+    <!-- Top Navigation Header -->
+    <header class="lesson-header">
+        <div class="breadcrumb-row">
+            <a href="learn.html" class="nav-back-arrow">←</a>
+            <div class="breadcrumb-path">
+                <span class="path-node" data-ha="Sifari" data-en="Programming">Sifari</span>
+                <span class="path-divider">&gt;</span>
+                <span class="path-node" data-ha="Gaban Shafi" data-en="Frontend">Gaban Shafi</span>
+                <span class="path-divider">&gt;</span>
+                <span class="path-node" data-ha="HTML" data-en="HTML">HTML</span>
+                <span class="path-divider">&gt;</span>
+                <span class="path-leaf" data-ha="Gabatarwa" data-en="Introduction">Gabatarwa</span>
+            </div>
+        </div>
+        
+        <div class="header-controls">
+            <div class="progress-container">
+                <div class="progress-fill" style="width: 91%;"></div>
+            </div>
+            <button class="lang-toggle" onclick="toggleLanguageState()">
+                <span class="lang-text">HA</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="lesson-main-layout">
+    <!-- Main Lesson Workspace Layout -->
+    <main class="lesson-workspace">
+        
+        <!-- Localized Topic Title Block -->
+        <div class="lesson-topic-header">
+            <h2 class="topic-title">
+                <span class="hausa-text">Ma'anar Semantika (Semantic HTML)</span>
+                <span class="english-text hidden">Semantic HTML</span>
+            </h2>
+        </div>
+
+        <!-- Core Lesson Card Workspace -->
+        <article class="lesson-card">
+            <div class="lesson-meta-badge">HTML • Ma'anar Semantika (Semantic HTML) (Semantic HTML)</div>
+
+            <h1 class="lesson-title">
+                <span class="hausa-text">Mene ne Semantic HTML?</span>
+                <span class="english-text hidden">What is Semantic HTML?</span>
+            </h1>
+
+            <hr class="divider">
+
+            <section class="lesson-content">
+                <p class="hausa-text">
+                    Semantic HTML na nufin amfani da alamomi masu ma'ana don bayyana abin da ke cikin shafin. Wannan yana taimakawa masu nakowa da kuma injunan bincike (search engines).
+
+Misali, maimakon amfani da <code>&lt;div&gt;</code> a ko'ina, za mu iya amfani da <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, da <code>&lt;footer&gt;</code>.
+                </p>
+                <p class="english-text hidden">
+                    Semantic HTML means using meaningful tags to describe the content. This helps screen readers and search engines understand your page.
+
+Instead of using <code>&lt;div&gt;</code> everywhere, we can use <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code>.
+                </p>
+
+                <!-- Code Example Terminal Box -->
+                <div class="code-example-container">
+                    <div class="code-header">Misali / Example</div>
+                    <pre class="code-display"><code>&lt;<span class="tag-color">header</span>&gt;
+  &lt;<span class="tag-color">h1</span>&gt;Taken Shafi&lt;/<span class="tag-color">h1</span>&gt;
+&lt;/<span class="tag-color">header</span>&gt;
+
+&lt;<span class="tag-color">main</span>&gt;
+  &lt;<span class="tag-color">article</span>&gt;
+    &lt;<span class="tag-color">h2</span>&gt;Labarinmu&lt;/<span class="tag-color">h2</span>&gt;
+    &lt;<span class="tag-color">p</span>&gt;Wannan shine abun ciki...&lt;/<span class="tag-color">p</span>&gt;
+  &lt;/<span class="tag-color">article</span>&gt;
+&lt;/<span class="tag-color">main</span>&gt;
+
+&lt;<span class="tag-color">footer</span>&gt;
+  &lt;<span class="tag-color">p</span>&gt;© 2026 DigitalHausa&lt;/<span class="tag-color">p</span>&gt;
+&lt;/<span class="tag-color">footer</span>&gt;</code></pre>
+                </div>
+
+                <!-- Technical Breakdown Explanations -->
+                <div class="explanation-box">
+                    <h3 data-ha="Alamomin Semantika:" data-en="Semantic Elements:">Alamomin Semantika:</h3>
+                    <ul>
+                        <li>
+                            <strong class="code-inline"><code>&lt;header&gt;</code></strong>: 
+                            <span class="hausa-text">Sashin kan shafi (logo, taken, nav).</span>
+                            <span class="english-text hidden">Top section of page.</span>
+                        </li>
+                        <li>
+                            <strong class="code-inline"><code>&lt;nav&gt;</code></strong>: 
+                            <span class="hausa-text">Hanyoyin shawagi (navigation links).</span>
+                            <span class="english-text hidden">Navigation links.</span>
+                        </li>
+                        <li>
+                            <strong class="code-inline"><code>&lt;main&gt;</code></strong>: 
+                            <span class="hausa-text">Babban abun cikin shafi.</span>
+                            <span class="english-text hidden">Main content area.</span>
+                        </li>
+                        <li>
+                            <strong class="code-inline"><code>&lt;article&gt;</code></strong>: 
+                            <span class="hausa-text">Mai zama abu mai cin kansa (blog post, news).</span>
+                            <span class="english-text hidden">Self-contained content.</span>
+                        </li>
+                        <li>
+                            <strong class="code-inline"><code>&lt;footer&gt;</code></strong>: 
+                            <span class="hausa-text">Sashin ƙasan shafi.</span>
+                            <span class="english-text hidden">Bottom section of page.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
+        <!-- Quick Check Segment Layout -->
+        <section class="quick-check-container">
+            <div class="quick-check-header" data-ha="Gwajin Fahimta" data-en="Quick Check">Gwajin Fahimta</div>
+            <div class="quiz-card">
+                <p class="quiz-question" data-ha="Wace alama ce ta dace don hanyoyin shawagi?" data-en="Which element is best for navigation links?">Wace alama ce ta dace don hanyoyin shawagi?</p>
+                
+                <div class="quiz-options-list">
+                    <button class="option-btn" onclick="checkAnswer(this, false)">
+                        <span class="option-marker">A</span>
+                        <span class="option-label" data-ha="&lt;div&gt;" data-en="&lt;div&gt;">&lt;div&gt;</span>
+                    </button>
+                    <button class="option-btn" onclick="checkAnswer(this, true)">
+                        <span class="option-marker">B</span>
+                        <span class="option-label" data-ha="&lt;nav&gt;" data-en="&lt;nav&gt;">&lt;nav&gt;</span>
+                    </button>
+                    <button class="option-btn" onclick="checkAnswer(this, false)">
+                        <span class="option-marker">C</span>
+                        <span class="option-label" data-ha="&lt;section&gt;" data-en="&lt;section&gt;">&lt;section&gt;</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Content Toggler Trigger Button -->
+    <button class="contents-floating-fab" onclick="toggleContentsSidebar()" aria-label="Toggle Table of Contents">
+        <span class="fab-icon">≡</span>
+    </button>
+
+    <!-- Floating Bottom Footer Controls Hub -->
+    <footer class="lesson-control-panel">
+        <div class="navigation-row">
+            <button class="control-btn prev-btn" onclick="window.location.href='html_forms.html'" data-ha="← Baya" data-en="← Previous">← Baya</button>
+            <button class="control-btn next-btn" onclick="window.location.href='html_media.html'" data-ha="Gaba →" data-en="Next →">Gaba →</button>
+        </div>
+    </footer>
+    </div> <!-- lesson-main-layout -->
+
+    <!-- LEFT-SIDEBAR FLOATING NAVIGATION DRAWER -->
+    <div id="sidebar-overlay" class="sidebar-overlay" onclick="toggleContentsSidebar()"></div>
+    <aside id="contents-sidebar" class="contents-left-sidebar">
+        <div class="sidebar-header">
+            <h3><img class="node-icon" src="icons/html5.svg" alt="HTML"> <span data-ha="Tsarin HTML" data-en="HTML Outline">Tsarin HTML</span></h3>
+            <button class="close-sidebar-btn" onclick="toggleContentsSidebar()">✕</button>
+        </div>
+
+        <!-- Sidebar Progress Panel Track Component -->
+        <div class="sidebar-progress-panel">
+            <div class="sidebar-progress-meta">
+                <span class="progress-label" data-ha="Ci gaba" data-en="Progress">Ci gaba</span>
+                <span class="progress-percentage">91%</span>
+            </div>
+            <div class="sidebar-progress-bar">
+                <div class="sidebar-progress-fill" style="width: 91%;"></div>
+            </div>
+        </div>
+        
+        <div class="sidebar-scroll-body">
+            <div class="sidebar-category">
+                <div class="category-title" data-ha="💻 Sifari" data-en="💻 Programming">💻 Sifari</div>
+                
+                <div class="sidebar-subcategory-block">
+                    <div class="subcategory-trigger">
+                        <span class="chevron">▼</span> <span data-ha="HTML" data-en="HTML">HTML</span>
+                    </div>
+                    
+                    <ul class="sidebar-nodes-list">
+                        <li class="node-item completed" onclick="window.location.href='html_introduction.html'">
+                            <span class="node-status">✓</span> <span data-ha="📘 Gabatarwa" data-en="📘 Intro">📘 Gabatarwa</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_elements.html'">
+                            <span class="node-status">✓</span> <span data-ha="🧱 Sifofin Gida" data-en="🧱 Elements">🧱 Sifofin Gida</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_attributes.html'">
+                            <span class="node-status">✓</span> <span data-ha="🏷️ Kayan Shafi" data-en="🏷️ Attributes">🏷️ Kayan Shafi</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_headings.html'">
+                            <span class="node-status">✓</span> <span data-ha="📰 Kunshiyar Rubutu" data-en="📰 Headings">📰 Kunshiyar Rubutu</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_paragraphs.html'">
+                            <span class="node-status">✓</span> <span data-ha="📝 Sakin Layi" data-en="📝 Paragraphs">📝 Sakin Layi</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_links.html'">
+                            <span class="node-status">✓</span> <span data-ha="🔗 Hanyoyi" data-en="🔗 Links">🔗 Hanyoyi</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_images.html'">
+                            <span class="node-status">✓</span> <span data-ha="🖼️ Hotuna" data-en="🖼️ Images">🖼️ Hotuna</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_lists.html'">
+                            <span class="node-status">✓</span> <span data-ha="📋 Jerarraki" data-en="📋 Lists">📋 Jerarraki</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_tables.html'">
+                            <span class="node-status">✓</span> <span data-ha="📊 Teburori" data-en="📊 Tables">📊 Teburori</span>
+                        </li>
+                        <li class="node-item completed" onclick="window.location.href='html_forms.html'">
+                            <span class="node-status">✓</span> <span data-ha="📋 Fommai" data-en="📋 Forms">📋 Fommai</span>
+                        </li>
+                        <li class="node-item active" onclick="window.location.href='html_semantic.html'">
+                            <span class="node-status">►</span> <span data-ha="🏗️ Semantika" data-en="🏗️ Semantic">🏗️ Semantika</span>
+                        </li>
+                        <li class="node-item locked">
+                            <span class="node-status">○</span> <span data-ha="🎬 Midiya" data-en="🎬 Media">🎬 Midiya</span>
+                        </li>
+                        <li class="node-item locked">
+                            <span class="node-status">○</span> <span data-ha="🏆 Aikin Ƙarshe" data-en="🏆 Project">🏆 Aikin Ƙarshe</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <script src="app.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Change the string 'lesson_id_here' to a unique name for each distinct page file
+        if (typeof completeLessonPage === "function") {
+            completeLessonPage('html_semantic');
+        }
+    });
+</script>
+
+</body>
+</html>

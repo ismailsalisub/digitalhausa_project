@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalHausa - Dashboard</title>
+
+    <link rel="stylesheet" href="design-tokens.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+    <!-- Main Branding Header Bar -->
+    <header class="dash-app-bar">
+        <div class="brand-identity">
+            <span class="brand-logo">🏮</span>
+            <h1 class="brand-name">DigitalHausa</h1>
+        </div>
+        
+        <!-- Global Language Switcher Pin -->
+        <button class="lang-toggle-badge" onclick="toggleLanguageState()">
+            <span class="lang-text">HA</span>
+        </button>
+    </header>
+
+    <!-- Main Scroll Workspace Container -->
+    <main class="dash-workspace page-workspace">
+        
+        <!-- Localized User Welcome Surface Card -->
+        <section class="welcome-surface-card">
+            <h2 class="user-greeting">
+                <span class="hausa-text">👋 Ina kwana, Ismail!</span>
+                <span class="english-text hidden">👋 Good morning, Ismail!</span>
+            </h2>
+            <p class="welcome-caption">
+                <span class="hausa-text">"Mun yi kewarka. Mu ci gaba da koyo."</span>
+                <span class="english-text hidden">"We missed you. Let's continue learning."</span>
+            </p>
+        </section>
+
+        <!-- Stats Overview Panel (Learning Streak Restored) -->
+        <section class="stats-overview-grid">
+            <div class="stat-card">
+                <span class="stat-icon">🔥</span>
+                <div class="stat-info">
+                    <div class="stat-value" id="stat-streak">5</div>
+                    <div class="stat-label" data-ha="Kwanaki a Jere" data-en="Day Streak">Kwanaki a Jere</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">🏆</span>
+                <div class="stat-info">
+                    <div class="stat-value" id="stat-xp">320</div>
+                    <div class="stat-label" data-ha="Maki (XP)" data-en="Total Points (XP)">Maki (XP)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Resume / Quick Track Container -->
+        <section class="resume-learning-panel" onclick="window.location.href='html_attributes.html'">
+            <div class="panel-tag" data-ha="▶ CIGABA DA KOYO" data-en="▶ CONTINUE LEARNING">▶ CIGABA DA KOYO</div>
+            
+            <div class="resume-hierarchy-box">
+                <div class="node-track">💻 Programming</div>
+                <div class="node-track sub-track">🎨 Frontend</div>
+                <div class="node-track sub-track">⚡ JavaScript</div>
+                <div class="node-leaf"><img class="resume-icon" src="icons/html5.svg" alt="HTML"> HTML Attributes</div>
+            </div>
+
+            <div class="resume-action-row">
+                <a href="lesson.html" class="resume-btn" data-ha="Ci gaba" data-en="Continue">Ci gaba</a>
+            </div>
+        </section>
+
+        <!-- Current Target Goal Progress Matrix -->
+        <section class="metric-card">
+            <div class="metric-header">
+                <span class="metric-icon">🎯</span>
+                <div class="metric-title-block">
+                    <h4 class="metric-label" data-ha="Babban Burinmu" data-en="Current Goal">Babban Burinmu</h4>
+                    <h3 class="metric-value">Become a Web Developer</h3>
+                </div>
+            </div>
+
+            <div class="goal-progress-container">
+                <div class="goal-progress-bar">
+                    <div class="goal-progress-fill" style="width: 13%;"></div>
+                </div>
+                <span class="goal-percent-text">13%</span>
+            </div>
+
+            <div class="goal-stats-footer">
+                <div class="stat-sub-node">
+                    <span class="stat-count">2 / 15</span>
+                    <span class="stat-sub-label" data-ha="Darussa" data-en="Lessons">Darussa</span>
+                </div>
+                <div class="stat-sub-node align-right">
+                    <span class="stat-count">13</span>
+                    <span class="stat-sub-label" data-ha="Sauran Darussa" data-en="Remaining">Sauran Darussa</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modular Learning Paths Outline Grid -->
+        <section class="content-block-section">
+            <h3 class="section-title" data-ha="📚 Hanyoyin Koyo" data-en="📚 Learning Paths">📚 Hanyoyin Koyo</h3>
+            
+            <div class="paths-list-wrapper">
+                <div class="path-row-item">
+                    <span class="path-name"><img class="path-icon" src="icons/html5.svg" alt="Foundation"> Foundation</span>
+                    <div class="path-progress-metric">
+                        <div class="mini-bar"><div class="mini-fill complete-bg" style="width: 100%;"></div></div>
+                        <span class="path-percent-label finished-color">100%</span>
+                    </div>
+                </div>
+                <div class="path-row-item">
+                    <span class="path-name"><img class="path-icon" src="icons/javascript.svg" alt="Programming"> Programming</span>
+                    <div class="path-progress-metric">
+                        <div class="mini-bar"><div class="mini-fill" style="width: 68%;"></div></div>
+                        <span class="path-percent-label">68%</span>
+                    </div>
+                </div>
+                <div class="path-row-item">
+                    <span class="path-name">💼 Office</span>
+                    <div class="path-progress-metric">
+                        <div class="mini-bar"><div class="mini-fill" style="width: 20%;"></div></div>
+                        <span class="path-percent-label">20%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Smart Spaced Review Session Queue -->
+        <section class="content-block-section">
+            <h3 class="section-title" data-ha="🔔 Maimaitawa na Yau" data-en="🔔 Reviews Today">🔔 Maimaitawa na Yau</h3>
+            <div class="review-chips-grid">
+                <div class="review-chip" data-ha="🧠 RAM" data-en="🧠 RAM">🧠 RAM</div>
+                <div class="review-chip" data-ha="🧱 Sifofin Gida na HTML" data-en="🧱 HTML Elements">🧱 Sifofin Gida na HTML</div>
+            </div>
+        </section>
+
+        <!-- Achievements Hub Target Row -->
+        <section class="content-block-section memory-margin">
+            <h3 class="section-title" data-ha="🏆 Nasarori" data-en="🏆 Achievements">🏆 Nasarori</h3>
+            <div class="achievements-empty-container">
+                <span class="empty-icon">🎖️</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Fixed Application Bottom Tab bar -->
+    <nav class="app-bottom-nav">
+        <a href="dashboard.html" class="nav-tab active-tab">
+            <span class="tab-icon">🏠</span>
+            <span class="tab-text" data-ha="Dashboard" data-en="Dashboard">Dashboard</span>
+        </a>
+        <a href="learn.html" class="nav-tab">
+            <span class="tab-icon">📖</span>
+            <span class="tab-text" data-ha="Koya" data-en="Learn">Koya</span>
+        </a>
+        <a href="dictionary.html" class="nav-tab">
+            <span class="tab-icon">📕</span>
+            <span class="tab-text" data-ha="Kamus" data-en="Dictionary">Kamus</span>
+        </a>
+        <a href="profile.html" class="nav-tab">
+            <span class="tab-icon">👤</span>
+            <span class="tab-text" data-ha="Tarihi" data-en="Profile">Tarihi</span>
+        </a>
+    </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>

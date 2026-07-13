@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalHausa - Profile</title>
+
+    <link rel="stylesheet" href="design-tokens.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+    <!-- Branding Header Navbar -->
+    <header class="dash-app-bar">
+        <div class="brand-identity">
+            <span class="brand-logo">🏮</span>
+            <h1 class="brand-name">DigitalHausa</h1>
+        </div>
+        
+        <!-- Global Language Switcher Pin -->
+        <button class="lang-toggle-badge" onclick="toggleLanguageState()">
+            <span class="lang-text">HA</span>
+        </button>
+    </header>
+
+    <!-- Main Scroll Workspace Container -->
+    <main class="profile-workspace page-workspace">
+        
+        <!-- Profile Identity Card -->
+        <section class="profile-identity-card">
+            <div class="avatar-frame">👤</div>
+            <div class="user-meta-details">
+                <!-- ID flags added here to manipulate layout text via JS dynamically -->
+                <h2 class="profile-username" id="profile-display-name">Bako (Guest)</h2>
+                <p class="profile-role-badge" id="profile-display-role" data-ha="Bako" data-en="Guest">Bako</p>
+            </div>
+        </section>
+
+        <!-- Academic Performance & Stats Card -->
+        <!-- Wrapped inside an ID container to hide easily from a Guest -->
+        <section class="metric-card" id="student-stats-card">
+            <div class="metric-header">
+                <span class="metric-icon">📊</span>
+                <div class="metric-title-block">
+                    <h4 class="metric-label" data-ha="Ayyukan Shafi" data-en="Activity Overview">Ayyukan Shafi</h4>
+                </div>
+            </div>
+
+            <div class="profile-stats-grid">
+                <div class="profile-stat-node">
+                    <span class="profile-stat-val" id="stat-lessons">0</span>
+                    <span class="profile-stat-lbl" data-ha="Darussan da Aka Gama" data-en="Completed Lessons">Darussan da Aka Gama</span>
+                </div>
+                <div class="profile-stat-node">
+                    <span class="profile-stat-val" id="stat-streak">0</span>
+                    <span class="profile-stat-lbl" data-ha="Kwanaki a Jere" data-en="Day Streak">Kwanaki a Jere</span>
+                </div>
+                <div class="profile-stat-node">
+                    <span class="profile-stat-val" id="stat-xp">0</span>
+                    <span class="profile-stat-lbl" data-ha="Jimillar Maki (XP)" data-en="Total XP">Jimillar Maki (XP)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Preferences Settings Links -->
+        <section class="content-block-section">
+            <h3 class="section-title" data-ha="📱 Tsarin Shafi" data-en="📱 App Settings">📱 Tsarin Shafi</h3>
+            
+            <div class="settings-list-wrapper">
+                <div class="settings-row-item">
+                    <div class="settings-left-side">
+                        <span class="settings-icon">🔔</span>
+                        <span class="settings-label-text" data-ha="Sanarwa (Notifications)" data-en="Notifications">Sanarwa (Notifications)</span>
+                    </div>
+                    <span class="settings-arrow">›</span>
+                </div>
+                <div class="settings-row-item">
+                    <div class="settings-left-side">
+                        <span class="settings-icon">🔊</span>
+                        <span class="settings-label-text" data-ha="Sautin Shafi" data-en="Sound Effects">Sautin Shafi</span>
+                    </div>
+                    <span class="settings-arrow">›</span>
+                </div>
+                <div class="settings-row-item">
+                    <div class="settings-left-side">
+                        <span class="settings-icon">💾</span>
+                        <span class="settings-label-text" data-ha="Ajiye Darasi (Offline)" data-en="Offline Storage">Ajiye Darasi (Offline)</span>
+                    </div>
+                    <span class="settings-arrow">›</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Account Preferences & Settings Links -->
+        <section class="content-block-section memory-margin">
+            <h3 class="section-title" data-ha="⚙️ Tsarin Akwanti" data-en="⚙️ Account Settings">⚙️ Tsarin Akwanti</h3>
+            
+            <div class="settings-list-wrapper">
+                <div class="settings-row-item">
+                    <div class="settings-left-side">
+                        <span class="settings-icon">✏️</span>
+                        <span class="settings-label-text" data-ha="Gyara Suna" data-en="Edit Profile Name">Gyara Suna</span>
+                    </div>
+                    <span class="settings-arrow">›</span>
+                </div>
+                <div class="settings-row-item">
+                    <div class="settings-left-side">
+                        <span class="settings-icon">🔒</span>
+                        <span class="settings-label-text" data-ha="Canza Kalmar Sirri" data-en="Change Password">Canza Kalmar Sirri</span>
+                    </div>
+                    <span class="settings-arrow">›</span>
+                </div>
+                <!-- Dynamic Action Button: Changes between Sign In / Log Out automatically -->
+                <div class="settings-row-item text-danger" id="auth-action-row">
+                    <div class="settings-left-side">
+                        <span class="settings-icon">🚪</span>
+                        <span class="settings-label-text" id="auth-action-label" data-ha="Shiga Shafi" data-en="Log In" onclick="simulateSignIn()">Shiga Shafi</span>
+                    </div>
+                    <span class="settings-arrow">›</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Master Nav Bar Setup: Modified directly by our Engine -->
+    <nav class="app-bottom-nav">
+        <a href="index.html" class="nav-tab">
+            <span class="tab-icon">🏠</span>
+            <span class="tab-text" data-ha="Gida" data-en="Home">Gida</span>
+        </a>
+        <a href="learn.html" class="nav-tab">
+            <span class="tab-icon">📖</span>
+            <span class="tab-text" data-ha="Koya" data-en="Learn">Koya</span>
+        </a>
+        <a href="dictionary.html" class="nav-tab">
+            <span class="tab-icon">📕</span>
+            <span class="tab-text" data-ha="Kamus" data-en="Dictionary">Kamus</span>
+        </a>
+        <a href="profile.html" class="nav-tab active-tab">
+            <span class="tab-icon">👤</span>
+            <span class="tab-text" data-ha="Tarihi" data-en="Profile">Tarihi</span>
+        </a>
+    </nav>
+
+  
+    <script src="app.js"></script>
+</body>
+</html>

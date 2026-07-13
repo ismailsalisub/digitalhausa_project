@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalHausa — Koyi da Kanka</title>
+
+
+<!-- For shared global nav layout structures -->
+    <!-- Google Fonts for crisp typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design-tokens.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+        <!-- Branding Header Navbar -->
+    <header class="dash-app-bar">
+        <div class="brand-identity">
+            <span class="brand-logo">🏮</span>
+            <h1 class="brand-name">DigitalHausa</h1>
+        </div>
+
+        <!-- Global Language Switcher Pin -->
+        <button class="lang-toggle-badge" onclick="toggleLanguageState()">
+            <span class="lang-text">HA</span>
+        </button>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-text-column">
+                <span class="hero-badge" data-ha="— Koyon Fasahan Zamani" data-en="— Modern Tech Education">— Koyon Fasahan Zamani</span>
+                
+                <h1 id="hero-title" class="hero-title"><span class="hausa-text">Koyi da Kanka</span><span class="english-text hidden">Learn by Yourself</span></h1>
+                
+                <p id="hero-desc" class="hero-description">
+                    <span class="hausa-text">A cikin harshen Hausa da Ingilishi. Daga farkon kwamfuta har zuwa gina manhajoji na zamani.</span>
+                    <span class="english-text hidden">In Hausa and English. From computer basics to building modern applications.</span>
+                </p>
+                
+                <div class="hero-actions">
+                    <!-- TARGET ADJUSTMENT: Routes guest directly to learning paths view -->
+                    <button class="btn-primary" onclick="window.location.href='learn.html'" data-ha="🚀 Fara Koyawa" data-en="🚀 Start Learning">🚀 Fara Koyawa</button>
+                    <button class="btn-secondary" onclick="window.location.href='learn.html'" data-ha="📚 Duba Kurssuna" data-en="📚 Browse Lessons">📚 Duba Kurssuna</button>
+                </div>
+            </div>
+
+            <!-- Visual Component (Lantern Stack Display) -->
+            <div class="hero-visual-column">
+                <div class="visual-card">
+                    <div class="ambient-glow"></div>
+                    <div class="visual-content">
+                        <div class="lantern-icon">🏮</div>
+                        <div class="floating-icons">
+                            <span>💻</span>
+                            <span>📚</span>
+                            <span>🌍</span>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag" >Excel</span>
+                            <span class="tech-tag" >AI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Universal Search Section -->
+        <section class="search-section">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input 
+                    type="text" 
+                    id="universal-search" 
+                    placeholder="Nemi darasi, ma'anar kalma, ko manhaja..."
+                    data-ha-placeholder="Nemi darasi, ma'anar kalma, ko manhaja..."
+                    data-en-placeholder="Search lessons, dictionary, software..."
+                >
+            </div>
+        </section>
+
+        <section class="tracks-section">
+            <div class="section-header">
+                <span class="section-badge" data-ha="— FARA DAGA NAN" data-en="— START HERE">— FARA DAGA NAN</span>
+
+                <h2 class="section-title" data-ha="Hanyar Koyonka" data-en="Your Learning Paths">Hanyar Koyonka</h2>
+                <p class="section-subtitle" data-ha="Duba matakan koyo daga farko har zuwa kwarewa. Danna kowane hoton don fara." data-en="Check your learning paths from basics up to expertise. Click any card to begin.">
+                    Duba matakan koyo daga farko har zuwa kwarewa. Danna kowane hoton don fara.
+                </p>
+            </div>
+
+            <div class="category-block" onclick="window.location.href='learn.html'">
+                <div class="category-info">
+                    <h3 class="category-name">🌱 <span data-ha="Foundation" data-en="Foundation">Foundation</span></h3>
+                    <p class="category-tagline" data-ha='"Gina Tubalin Ilimi"' data-en='"Building the Foundation of Knowledge"'>"Gina Tubalin Ilimi"</p>
+                </div>
+                <div class="sub-cards-grid">
+                    <div class="sub-card">
+                        <div class="sub-card-icon">🖥</div>
+                        <h4 class="sub-card-title" data-ha="Ka'idodin Kwamfuta" data-en="Computer Basics">Ka'idodin Kwamfuta</h4>
+                        <span class="sub-card-meta">24 Lessons • Beginner</span>
+                    </div>
+                    <div class="sub-card">
+                        <div class="sub-card-icon">🌍</div>
+                        <h4 class="sub-card-title" data-ha="Intanet" data-en="Internet">Intanet</h4>
+                        <span class="sub-card-meta">16 Lessons • Beginner</span>
+                    </div>
+                    <div class="sub-card">
+                        <div class="sub-card-icon">✉</div>
+                        <h4 class="sub-card-title" data-ha="Imel (Email)" data-en="Email">Imel (Email)</h4>
+                        <span class="sub-card-meta">12 Lessons • Beginner</span>
+                    </div>
+                    <div class="sub-card">
+                        <div class="sub-card-icon">📁</div>
+                        <h4 class="sub-card-title" data-ha="Fayiloli & Juzu'i" data-en="Files & Folders">Fayiloli & Juzu'i</h4>
+                        <span class="sub-card-meta">18 Lessons • Beginner</span>
+                    </div>
+                </div>
+                <a href="learn.html" class="explore-link" data-ha="Explore Foundation →" data-en="Explore Foundation →">Explore Foundation →</a>
+            </div>
+
+            <div class="category-block" onclick="window.location.href='learn.html'">
+                <div class="category-info">
+                    <h3 class="category-name">💼 <span data-ha="Office & Work" data-en="Office & Work">Office & Work</span></h3>
+                    <p class="category-tagline" data-ha='"Fasahohin Aiki na Zamani"' data-en='"Modern Work Skills"'>"Fasahohin Aiki na Zamani"</p>
+                </div>
+                <div class="sub-cards-grid">
+                    <div class="sub-card">
+                        <div class="sub-card-icon">📝</div>
+                        <h4 class="sub-card-title" data-ha="Microsoft Word" data-en="Microsoft Word">Microsoft Word</h4>
+                        <span class="sub-card-meta">28 Lessons • Beginner</span>
+                    </div>
+                    <div class="sub-card">
+                        <div class="sub-card-icon">📊</div>
+                        <h4 class="sub-card-title" data-ha="Microsoft Excel" data-en="Microsoft Excel">Microsoft Excel</h4>
+                        <span class="sub-card-meta">31 Lessons • Beginner</span>
+                    </div>
+                    <div class="sub-card">
+                        <div class="sub-card-icon">🖥</div>
+                        <h4 class="sub-card-title" data-ha="PowerPoint" data-en="PowerPoint">PowerPoint</h4>
+                        <span class="sub-card-meta">15 Lessons • Beginner</span>
+                    </div>
+                    <div class="sub-card">
+                        <div class="sub-card-icon">🖨</div>
+                        <h4 class="sub-card-title" data-ha="Hanyoyin Printing" data-en="Printing Basics">Hanyoyin Printing</h4>
+                        <span class="sub-card-meta">10 Lessons • Beginner</span>
+                    </div>
+                </div>
+                <a href="learn.html" class="explore-link" data-ha="Explore Office & Work →" data-en="Explore Office & Work →">Explore Office & Work →</a>
+            </div>
+
+            <div class="category-block" onclick="window.location.href='learn.html'">
+                <div class="category-info">
+                    <h3 class="category-name">💻 <span data-ha="Programming" data-en="Programming">Programming</span></h3>
+                    <p class="category-tagline" data-ha='"Gina Manhajoji da Lamba"' data-en='"Building Software with Code"'>"Gina Manhajoji da Lamba"</p>
+                </div>
+                <div class="sub-cards-grid">
+                    <div class="sub-card highlight-card">
+                        <div class="sub-card-icon">🌐</div>
+                        <h4 class="sub-card-title" data-ha="HTML" data-en="HTML">HTML</h4>
+                        <span class="sub-card-meta">34 Lessons • Beginner</span>
+                    </div>
+                    <div class="sub-card">
+                        <div class="sub-card-icon">🎨</div>
+                        <h4 class="sub-card-title" data-ha="CSS" data-en="CSS">CSS</h4>
+                        <span class="sub-card-meta">27 Lessons • Beginner</span>
+                    </div>
+                    <div class="sub-card">
+                        <div class="sub-card-icon">⚙</div>
+                        <h4 class="sub-card-title" data-ha="JavaScript" data-en="JavaScript">JavaScript</h4>
+                        <span class="sub-card-meta">61 Lessons • Intermediate</span>
+                    </div>
+                    <div class="sub-card">
+                        <div class="sub-card-icon">🐍</div>
+                        <h4 class="sub-card-title" data-ha="Python" data-en="Python">Python</h4>
+                        <span class="sub-card-meta">45 Lessons • Beginner</span>
+                    </div>
+                </div>
+                <a href="learn.html" class="explore-link link-green" data-ha="Fara Koyon Programming →" data-en="Explore Programming →">Fara Koyon Programming →</a>
+            </div>
+        </section>
+
+        <section class="journey-section">
+            <span class="section-badge" data-ha="— TSARIN KOYI" data-en="— LEARNING SYSTEM">— TSARIN KOYI</span>
+            <div class="section-header center-text">
+                <h2 class="section-title" data-ha="Yadda Tsarin Yake" data-en="How Learning Works">Yadda Tsarin Yake</h2>
+            </div>
+
+            <div class="journey-flow">
+                <div class="journey-step"><div class="step-number">1</div><div class="step-details"><h4 data-ha="Zabi Burin Koyo" data-en="Choose Goal">Zabi Burin Koyo</h4></div></div>
+                <div class="flow-line"></div>
+                <div class="journey-step"><div class="step-number">2</div><div class="step-details"><h4 data-ha="Koyi Darasi" data-en="Learn">Koyi Darasi</h4></div></div>
+                <div class="flow-line"></div>
+                <div class="journey-step"><div class="step-number">3</div><div class="step-details"><h4 data-ha="Yi Gwaji (Practice)" data-en="Practice">Yi Gwaji (Practice)</h4></div></div>
+                <div class="flow-line"></div>
+                <div class="journey-step"><div class="step-number">4</div><div class="step-details"><h4 data-ha="Binciken Fahimta" data-en="Quick Check">Binciken Fahimta</h4></div></div>
+                <div class="flow-line"></div>
+                <div class="journey-step"><div class="step-number">5</div><div class="step-details"><h4 data-ha="Amsa Tambayoyi (Quiz)" data-en="Quiz">Amsa Tambayoyi (Quiz)</h4></div></div>
+                <div class="flow-line"></div>
+                <div class="journey-step"><div class="step-number">6</div><div class="step-details"><h4 data-ha="Maimaitawa" data-en="Review">Maimaitawa</h4></div></div>
+                <div class="flow-line"></div>
+                <div class="journey-step"><div class="step-number">7</div><div class="step-details"><h4 data-ha="Kwarewa (Master)" data-en="Master">Kwarewa (Master)</h4></div></div>
+            </div>
+        </section>
+
+        <section class="why-section">
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">🇭🇦</div>
+                    <h3 data-ha="Hausa Na Fari" data-en="Hausa First">Hausa Na Fari</h3>
+                    <p data-ha="Koyi fasaha cikin sauki ta amfani da yarenka na haihuwa." data-en="Learn technology easily using your native mother tongue.">Koyi fasaha cikin sauki ta amfani da yarenka na haihuwa.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🌳</div>
+                    <h3 data-ha="Bishiyar Ilimi" data-en="Knowledge Tree">Bishiyar Ilimi</h3>
+                    <p data-ha="Komai yana da alaka da juna. Koyi FROM matakin farko zuwa gaba." data-en="Everything is connected. Learn from first principles step-by-step.">Komai yana da alaka da juna. Koyi daga matakin farko zuwa gaba.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">📈</div>
+                    <h3 data-ha="Bibiyar Ci Gaba" data-en="Track Progress">Bibiyar Ci Gaba</h3>
+                    <p data-ha="San ainihin inda ka tsaya da kuma abin da ya rage maka ka koya." data-en="Know exactly where you left off and what is left for you to learn.">San ainihin inda ka tsaya da kuma abin da ya rage maka ka koya.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🧠</div>
+                    <h3 data-ha="Fahimta Kafin Hadda" data-en="Learn by Understanding">Fahimta Kafin Hadda</h3>
+                    <p data-ha="Muna koyar da tushen yadda abubuwa ke aiki maimakon hadda lamba." data-en="We teach the fundamentals of how concepts work instead of raw memorization.">Muna koyar da tushen yadda abubuwa ke aiki maimakon hadda lamba.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-cta-banner">
+            <h2 data-ha="Fara Tafiyar Koyonka Yau" data-en="Start Your Learning Journey Today">Fara Tafiyar Koyonka Yau</h2>
+            <p data-ha="Shiga cikin dubban masu koyon da suka riga suka fara." data-en="Join thousands of learners who have already started.">Shiga cikin dubban masu koyon da suka riga suka fara.</p>
+            <!-- TARGET ADJUSTMENT: Secondary route into learning ecosystem -->
+            <button class="btn-cta-footer" onclick="window.location.href='profile.html'" data-ha="Yi Rajista a Kyauta" data-en="Register for Free">Yi Rajista a Kyauta</button>
+        </div>
+
+        <div class="footer-container">
+            <div class="footer-links-grid">
+                <div class="footer-column">
+                    <h4 data-ha="Dandalin" data-en="Platform">Dandalin</h4>
+                    <ul>
+                        <li><a href="learn.html" data-ha="Kurssuna" data-en="Lessons">Kurssuna</a></li>
+                        <li><a href="learn.html" data-ha="Hanyar Koyo" data-en="Learning Paths">Hanyar Koyo</a></li>
+                        <li><a href="dictionary.html" data-ha="Almanac" data-en="Almanac">Almanac</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-ha="Al'umma" data-en="Community">Al'umma</h4>
+                    <ul>
+                        <li><a href="#" data-ha="Taimako" data-en="Help & Support">Taimako</a></li>
+                        <li><a href="#" data-ha="Shawarwari" data-en="Feedback">Shawarwari</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-ha="Koyo" data-en="Learning">Koyo</h4>
+                    <ul>
+                        <li><a href="learn.html" data-ha="Ka'idodin Kwamfuta" data-en="Computer Basics">Ka'idodin Kwamfuta</a></li>
+                        <li><a href="learn.html" data-ha="Programming" data-en="Programming">Programming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-ha="Shafi" data-en="Legal/Pages">Shafi</h4>
+                    <ul>
+                        <li><a href="#" data-ha="Sharuddan Aiki" data-en="Terms of Service">Sharuddan Aiki</a></li>
+                        <li><a href="#" data-ha="Tsare Sirri" data-en="Privacy Policy">Tsare Sirri</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <span class="logo-icon">🎓</span>
+                    <span class="logo-text">DIGITALHAUSA</span>
+                </div>
+                <p class="copyright-text">2026 DigitalHausa. <span data-ha="Duk hakkin da aka kare." data-en="All rights reserved.">Duk hakkin da aka kare.</span></p>
+            </div>
+
+          
+        </div>
+    </footer>
+
+    <!-- NEW COMPONENT: Persistent Guest Mobile Bottom Tab Bar Navigation -->
+    <nav class="app-bottom-nav">
+        <a href="index.html" class="nav-tab active-tab">
+            <span class="tab-icon">🏠</span>
+            <span class="tab-text" data-ha="Gida" data-en="Home">Gida</span>
+        </a>
+        <a href="learn.html" class="nav-tab">
+            <span class="tab-icon">📖</span>
+            <span class="tab-text" data-ha="Koya" data-en="Learn">Koya</span>
+        </a>
+        <a href="dictionary.html" class="nav-tab">
+            <span class="tab-icon">📕</span>
+            <span class="tab-text" data-ha="Kamus" data-en="Dictionary">Kamus</span>
+        </a>
+        <a href="profile.html" class="nav-tab">
+            <span class="tab-icon">👤</span>
+            <span class="tab-text" data-ha="Tarihi" data-en="Profile">Tarihi</span>
+        </a>
+    </nav>
+  
+    <script src="app.js"></script>
+</body>
+</html>

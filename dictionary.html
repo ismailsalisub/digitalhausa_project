@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalHausa - Kamus</title>
+
+
+    <link rel="stylesheet" href="design-tokens.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+    <!-- Branding Header Navbar -->
+    <header class="dash-app-bar">
+        <div class="brand-identity">
+            <span class="brand-logo">🏮</span>
+            <h1 class="brand-name">DigitalHausa</h1>
+        </div>
+        
+        <!-- Global Language Switcher Pin -->
+        <button class="lang-toggle-badge" onclick="toggleLanguageState()">
+            <span class="lang-text">HA</span>
+        </button>
+    </header>
+
+    <!-- Main Scroll Workspace Container -->
+    <main class="dict-workspace page-workspace">
+        
+        <!-- Section Subtitle Tag -->
+        <div class="dict-meta-tag">— KAMUSUN FASAHA</div>
+        <h2 class="dict-main-title">Ƙamus</h2>
+        <p class="dict-description">
+            <span class="hausa-text">Nemi kalmomin fasaha a Turanci da ma'anarsu da Hausa.</span>
+            <span class="english-text hidden">Search technical terms in English and their meanings in Hausa.</span>
+        </p>
+
+        <!-- Search input box -->
+        <div class="search-box-wrapper">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="dict-search-field" class="dict-search-input" placeholder="Bincike kalma..." data-ha-placeholder="Bincike kalma..." data-en-placeholder="Search terms...">
+        </div>
+
+        <!-- Filter Chips Carousel Layout -->
+        <div class="filter-chips-carousel">
+            <button class="chip active-chip" data-category="all" data-ha="Duka" data-en="All">Duka</button>
+            <button class="chip" data-category="Programming">Programming</button>
+            <button class="chip" data-ha="Yanar Gizo" data-en="Web" data-category="Yanar gizo">Yanar Gizo</button>
+            <button class="chip" data-category="Ka'idodi" data-ha="Ka'idodi" data-en="Rules">Ka'idodi</button>
+        </div>
+
+        <!-- Results Counter -->
+        <div class="results-counter">
+            <span class="count-num">25</span> 
+            <span data-ha="sakamako" data-en="results">sakamako</span>
+        </div>
+
+                <!-- Dictionary Accordion Stack List -->
+        <div class="dict-accordion-stack">
+            <!-- Term Entry 1: Algorithm -->
+            <div class="dict-card expanded-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Algorithm <span class="term-tag">Programming</span></div>
+                            <div class="term-hausa-translation">Tsarin Lissafi</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▲</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Tsarin matakai-matakai don warware wata matsala.</p>
+                    <p class="definition-text english-text hidden">A step-by-step procedure for solving a problem.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">Algorithm na nemi mafi girman lambobi a cikin jerin lambobi.</div>
+                    <div class="example-code-block english-text hidden">An algorithm to find the largest number in a list.</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 2: Array -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Array <span class="term-tag">Programming</span></div>
+                            <div class="term-hausa-translation">Jerin Bayanai</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Tsarin jera bayanai masu yawa a wuri guda ta amfani da lamba.</p>
+                    <p class="definition-text english-text hidden">A data structure that stores multiple values in a single variable using indexes.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">const kwayayyen = ["shayi", "kofi", "ruwa"];</div>
+                    <div class="example-code-block english-text hidden">const fruits = ["apple", "banana", "orange"];</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 3: Variable -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Variable <span class="term-tag">Programming</span></div>
+                            <div class="term-hausa-translation">Ma'ajiyar Lamba</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Wuri da aka ware don ajiye bayani mai canzawa a cikin shirin lamba.</p>
+                    <p class="definition-text english-text hidden">A named storage location that holds a value which can change during program execution.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">let sunan = "Ahmad";</div>
+                    <div class="example-code-block english-text hidden">let name = "Ahmad";</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 4: Function -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Function <span class="term-tag">Programming</span></div>
+                            <div class="term-hausa-translation">Aiki</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Bangare na lamba da ke aiwatar da wani aiki na musamman kuma yana iya amfani da shi sau da yawa.</p>
+                    <p class="definition-text english-text hidden">A reusable block of code designed to perform a specific task.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">function gaishewa(suna) { return "Barka da zuwa, " + suna; }</div>
+                    <div class="example-code-block english-text hidden">function greet(name) { return "Hello, " + name; }</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 5: Loop -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Loop <span class="term-tag">Programming</span></div>
+                            <div class="term-hausa-translation">Maimaitawa</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Tsarin lamba da ke sake aiwatar da wani bangare har zuwa lokacin da wata sharadi ta cika.</p>
+                    <p class="definition-text english-text hidden">A programming structure that repeats a block of code until a condition is met.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">for (let i = 0; i < 5; i++) { console.log(i); }</div>
+                    <div class="example-code-block english-text hidden">for (let i = 0; i < 5; i++) { console.log(i); }</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 6: Conditional -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Conditional <span class="term-tag">Programming</span></div>
+                            <div class="term-hausa-translation">Sharadi</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Wani bangare na lamba da ke aiwatar da wani aiki idan wata sharadi ta cika ko ta gaza.</p>
+                    <p class="definition-text english-text hidden">A statement that executes different actions based on whether a condition is true or false.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">if (zabi > 18) { console.log("Kai manya ne"); }</div>
+                    <div class="example-code-block english-text hidden">if (age > 18) { console.log("You are an adult"); }</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 7: Object -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Object <span class="term-tag">Programming</span></div>
+                            <div class="term-hausa-translation">Abu</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Tsarin bayani da ke rike jimillar sifofi (properties) da ayyuka (methods).</p>
+                    <p class="definition-text english-text hidden">A data structure that contains properties (data) and methods (functions) as key-value pairs.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">const dalibi = { suna: "Ahmad", shekara: 20 };</div>
+                    <div class="example-code-block english-text hidden">const student = { name: "Ahmad", age: 20 };</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 8: Class -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Class <span class="term-tag">Programming</span></div>
+                            <div class="term-hausa-translation">Rukuni</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Tsari na siffa (template) don ƙirƙirar abubuwa masu sifofi da ayyuka iri ɗaya.</p>
+                    <p class="definition-text english-text hidden">A blueprint for creating objects with shared properties and methods.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">class Mota { constructor(suna) { this.suna = suna; } }</div>
+                    <div class="example-code-block english-text hidden">class Car { constructor(name) { this.name = name; } }</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 9: Bug -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Bug <span class="term-tag">Programming</span></div>
+                            <div class="term-hausa-translation">Kurakurai</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Kuskure a cikin lamba da ke hana shirin yin aiki yadda ya kamata.</p>
+                    <p class="definition-text english-text hidden">An error or flaw in code that causes a program to behave unexpectedly.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">An sami bug a cikin jerin lamba na lissafi.</div>
+                    <div class="example-code-block english-text hidden">A bug was found in the calculation logic.</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 10: Debug -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Debug <span class="term-tag">Programming</span></div>
+                            <div class="term-hausa-translation">Gyara Kurakurai</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Aikin nemo da kuma gyara kurakurai a cikin shirin lamba.</p>
+                    <p class="definition-text english-text hidden">The process of finding and fixing errors in a computer program.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">Na yi amfani da console.log don debug shirin.</div>
+                    <div class="example-code-block english-text hidden">I used console.log to debug the program.</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 11: API -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">API <span class="term-tag">Yanar Gizo</span></div>
+                            <div class="term-hausa-translation">Hanyar Haɗin Manhaja</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Hanyar da ke ba da damar shirye-shirye daban-daban su tattauna da juna.</p>
+                    <p class="definition-text english-text hidden">A set of rules that allows different software applications to communicate with each other.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">API na Google Maps yana ba da damar nuna taswiror a shafinku.</div>
+                    <div class="example-code-block english-text hidden">The Google Maps API allows you to embed maps on your website.</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 12: Browser -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Browser <span class="term-tag">Yanar Gizo</span></div>
+                            <div class="term-hausa-translation">Burauza</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Shirin kwamfuta da ake amfani da shi don kallon shafukan yanar gizo.</p>
+                    <p class="definition-text english-text hidden">A software application used to access and view websites on the internet.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">Chrome, Firefox, da Safari sune manyan burauzoji.</div>
+                    <div class="example-code-block english-text hidden">Chrome, Firefox, and Safari are major web browsers.</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 13: URL -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">URL <span class="term-tag">Yanar Gizo</span></div>
+                            <div class="term-hausa-translation">Adireshin Yanar Gizo</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Jigon adireshin da ke nuna wuri na musamman a yanar gizo.</p>
+                    <p class="definition-text english-text hidden">The address used to access a specific resource on the internet.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">https://www.digitalhausa.com</div>
+                    <div class="example-code-block english-text hidden">https://www.digitalhausa.com</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 14: Server -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Server <span class="term-tag">Yanar Gizo</span></div>
+                            <div class="term-hausa-translation">Saba</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Kwamfuta mai ba da bayanai da ayyuka ga wasu kwamfyutoci ta hanyar hanya.</p>
+                    <p class="definition-text english-text hidden">A computer that provides data and services to other computers over a network.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">Sabar yanar gizo tana ba da shafukanmu ga masu ziyara.</div>
+                    <div class="example-code-block english-text hidden">The web server delivers our pages to visitors.</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 15: Domain -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Domain <span class="term-tag">Yanar Gizo</span></div>
+                            <div class="term-hausa-translation">Yankin Yanar Gizo</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Sunan da ke nuna wani shafin yanar gizo a cikin intanet.</p>
+                    <p class="definition-text english-text hidden">The human-readable name that identifies a website on the internet.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">digitalhausa.com shine yankinmu.</div>
+                    <div class="example-code-block english-text hidden">digitalhausa.com is our domain.</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 16: Hosting -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Hosting <span class="term-tag">Yanar Gizo</span></div>
+                            <div class="term-hausa-translation">Ajiyar Shafi</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Aikin ajiye fayilolin shafin yanar gizo a kan sabar don samunwa ta intanet.</p>
+                    <p class="definition-text english-text hidden">The service of storing website files on a server to make them accessible online.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">Muna amfani da Netlify don ajiyar shafinmu.</div>
+                    <div class="example-code-block english-text hidden">We use Netlify for hosting our website.</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 17: Responsive -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Responsive <span class="term-tag">Yanar Gizo</span></div>
+                            <div class="term-hausa-translation">Mai Daidaitawa</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Tsarin shafin da ke daidaita kansa don kyalli daban-daban (waya, kwamfuta, tebur).</p>
+                    <p class="definition-text english-text hidden">A design approach that makes web pages render well on different screen sizes and devices.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">Shafinmu yana da tsari mai daidaitawa don wayoyi da kwamfyutoci.</div>
+                    <div class="example-code-block english-text hidden">Our site has a responsive design for phones and computers.</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 18: Cookie -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Cookie <span class="term-tag">Yanar Gizo</span></div>
+                            <div class="term-hausa-translation">Kuki</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Karamin fayil da burauza ke ajiye don tuna bayani game da mai amfani.</p>
+                    <p class="definition-text english-text hidden">A small file stored by a browser to remember information about a user.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">Kuki yana taimakawa wajen tuna shafinku na farko.</div>
+                    <div class="example-code-block english-text hidden">Cookies help remember your preferred language.</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 19: Syntax -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Syntax <span class="term-tag">Ka'idodi</span></div>
+                            <div class="term-hausa-translation">Dokokin Rubutu</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Ka'idodin yadda ake rubuta lamba cikin harshe na musamman.</p>
+                    <p class="definition-text english-text hidden">The set of rules that defines how code must be written in a specific programming language.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">A cikin JavaScript, dole ne kowane umarni ya ƙare da semicolon.</div>
+                    <div class="example-code-block english-text hidden">In JavaScript, each statement should end with a semicolon.</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 20: Semantic HTML -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Semantic HTML <span class="term-tag">Ka'idodi</span></div>
+                            <div class="term-hausa-translation">HTML Mai Ma'ana</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Amfani da alamomin HTML masu ma'ana don bayyana abin da ke cikin shafin.</p>
+                    <p class="definition-text english-text hidden">Using HTML tags that convey meaning about the content they contain.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">Amfani da &lt;header&gt; maimakon &lt;div&gt; don sakin kan shafi.</div>
+                    <div class="example-code-block english-text hidden">Using &lt;header&gt; instead of &lt;div&gt; for the top section.</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 21: Accessibility -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Accessibility <span class="term-tag">Ka'idodi</span></div>
+                            <div class="term-hausa-translation">Saukin Amfani</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Tsarin gina shafin don ya zama mai saukin amfani ga kowa har da masu nakowa.</p>
+                    <p class="definition-text english-text hidden">Designing websites so they can be used by everyone, including people with disabilities.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">Saka alt text a kan hotuna don masu nakowa.</div>
+                    <div class="example-code-block english-text hidden">Adding alt text to images for screen readers.</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 22: Comment -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Comment <span class="term-tag">Ka'idodi</span></div>
+                            <div class="term-hausa-translation">Ra'ayi</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Rubutu a cikin lamba da burauza ke watsarwa, amma masu tsara ke karanta shi.</p>
+                    <p class="definition-text english-text hidden">Text in code that is ignored by the browser but readable by developers.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">&lt;!-- Wannan sakin kan shafi ne --&gt;</div>
+                    <div class="example-code-block english-text hidden">&lt;!-- This is the header section --&gt;</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 23: Indentation -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Indentation <span class="term-tag">Ka'idodi</span></div>
+                            <div class="term-hausa-translation">Tsari na Ciki</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Amfani da sarari a gaban layuka don nuna tsarin lamba.</p>
+                    <p class="definition-text english-text hidden">Using spaces or tabs at the beginning of lines to show code structure and hierarchy.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">Kowane abu a cikin &lt;body&gt; ya kamata ya zama cikin tsari na ciki.</div>
+                    <div class="example-code-block english-text hidden">Everything inside &lt;body&gt; should be indented for readability.</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 24: Nesting -->
+            <div class="dict-card">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Nesting <span class="term-tag">Ka'idodi</span></div>
+                            <div class="term-hausa-translation">Saka Ciki</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Saka alama a cikin wata alama don nuna alaka tsakaninsu.</p>
+                    <p class="definition-text english-text hidden">Placing one HTML element inside another to show their relationship.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">&lt;ul&gt; &lt;li&gt;Abu&lt;/li&gt; &lt;/ul&gt; — &lt;li&gt; yana cikin &lt;ul&gt;.</div>
+                    <div class="example-code-block english-text hidden">&lt;ul&gt; &lt;li&gt;Item&lt;/li&gt; &lt;/ul&gt; — &lt;li&gt; is nested inside &lt;ul&gt;.</div>
+                </div>
+            </div>
+
+            <!-- Term Entry 25: Validation -->
+            <div class="dict-card memory-margin">
+                <div class="dict-card-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <span class="term-book-icon">📖</span>
+                        <div class="term-title-block">
+                            <div class="term-english">Validation <span class="term-tag">Ka'idodi</span></div>
+                            <div class="term-hausa-translation">Tabbatarwa</div>
+                        </div>
+                    </div>
+                    <span class="accordion-arrow">▼</span>
+                </div>
+
+                <div class="dict-card-body">
+                    <div class="body-section-label" data-ha="MA'ANA" data-en="DEFINITION">MA'ANA</div>
+                    <p class="definition-text hausa-text">Duba ko lambarku tana bin ka'idodin harshen da aka tsara.</p>
+                    <p class="definition-text english-text hidden">Checking whether your code follows the rules and standards of the language.</p>
+
+                    <div class="body-section-label" data-ha="MISALI" data-en="EXAMPLE">MISALI</div>
+                    <div class="example-code-block hausa-text">Amfani da W3C Validator don tabbatar da HTML.</div>
+                    <div class="example-code-block english-text hidden">Using the W3C Validator to check your HTML.</div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Global Fixed Application Bottom Tab bar -->
+  <!-- Global Fixed Guest Application Bottom Tab bar -->
+<nav class="app-bottom-nav">
+    <!-- REPLACED: 'Dashboard' is hidden; 'Home' links directly back to the landing page -->
+    <a href="index.html" class="nav-tab">
+        <span class="tab-icon">🏠</span>
+        <span class="tab-text">Home</span>
+    </a>
+    
+    <a href="learn.html" class="nav-tab active-tab">
+        <span class="tab-icon">📖</span>
+        <span class="tab-text">Learn</span>
+    </a>
+    
+    <a href="dictionary.html" class="nav-tab">
+        <span class="tab-icon">📕</span>
+        <span class="tab-text">Dictionary</span>
+    </a>
+    
+    <a href="profile.html" class="nav-tab">
+        <span class="tab-icon">👤</span>
+        <span class="tab-text">Profile</span>
+    </a>
+</nav>
+
+  
+    <!-- <nav class="app-bottom-nav">
+        <a href="dashboard.html" class="nav-tab">
+            <span class="tab-icon">🏠</span>
+            <span class="tab-text">Dashboard</span>
+        </a>
+        <a href="learn.html" class="nav-tab">
+            <span class="tab-icon">📖</span>
+            <span class="tab-text">Learn</span>
+        </a>
+        <a href="dictionary.html" class="nav-tab active-tab">
+            <span class="tab-icon">📕</span>
+            <span class="tab-text">Dictionary</span>
+        </a>
+        <a href="profile.html" class="nav-tab">
+            <span class="tab-icon">👤</span>
+            <span class="tab-text">Profile</span>
+        </a>
+    </nav> -->
+
+    <!-- UI Interaction Controller Logic -->
+    <script>
+        function toggleAccordion(headerElement) {
+            const card = headerElement.parentElement;
+            const arrow = headerElement.querySelector('.accordion-arrow');
+            
+            card.classList.toggle('expanded-card');
+            if (card.classList.contains('expanded-card')) {
+                arrow.innerText = '▲';
+            } else {
+                arrow.innerText = '▼';
+            }
+        }
+
+        
+
+    </script>
+
+  <script src="app.js"></script>
+</body>
+</html>
